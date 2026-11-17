@@ -1,0 +1,106 @@
+template:
+- - name: MKTWDBERNARTICE POR FVE
+    state: '{{ is_state(''binary_sensor.mktwdbernartice_por_fve'', ''on'') }}'
+    unique_id: mktwdbernartice_por_fve
+    attributes:
+      Node: MKTWDBERNARTICE
+      qname: POR FVE
+      Address: '-1'
+      Format: MaskedBool
+      Scale: '1'
+      IP: 192.168.66.10
+      Ide: '208'
+      q_name_cs: Stav FVE
+      defaultJednotky: Stav
+      id: '62'
+      symbol: Stav
+  - name: MKTWDBERNARTICE Stav RNN1
+    state: '{{ is_state(''binary_sensor.mktwdbernartice_stav_rnn1'', ''on'') }}'
+    unique_id: mktwdbernartice_stav_rnn1
+    attributes:
+      Node: MKTWDBERNARTICE
+      qname: Stav RNN1
+      Address: '3'
+      Format: MaskedBool
+      Scale: '1'
+      IP: 192.168.66.10
+      Ide: '208'
+      q_name_cs: Stav RNN1
+      defaultJednotky: Stav
+      id: '62'
+      symbol: Stav
+  - name: MKTWDBERNARTICE Stav RNN1
+    state: '{{ is_state(''binary_sensor.mktwdbernartice_stav_rnn1'', ''on'') }}'
+    unique_id: mktwdbernartice_stav_rnn1
+    attributes:
+      Node: MKTWDBERNARTICE
+      qname: Stav RNN1
+      Address: '3'
+      Format: MaskedBool
+      Scale: '1'
+      IP: 192.168.66.10
+      Ide: '208'
+      q_name_cs: Stav RNN1
+      defaultJednotky: Stav
+      id: '62'
+      symbol: Stav
+  - name: MKTWDBERNARTICE Stav RNN2
+    state: '{{ is_state(''binary_sensor.mktwdbernartice_stav_rnn2'', ''on'') }}'
+    unique_id: mktwdbernartice_stav_rnn2
+    attributes:
+      Node: MKTWDBERNARTICE
+      qname: Stav RNN2
+      Address: '4'
+      Format: MaskedBool
+      Scale: '1'
+      IP: 192.168.66.10
+      Ide: '208'
+      q_name_cs: Stav RNN2
+      defaultJednotky: Stav
+      id: '62'
+      symbol: Stav
+  - name: MKTWDBERNARTICE Stav RNN2
+    state: '{{ is_state(''binary_sensor.mktwdbernartice_stav_rnn2'', ''on'') }}'
+    unique_id: mktwdbernartice_stav_rnn2
+    attributes:
+      Node: MKTWDBERNARTICE
+      qname: Stav RNN2
+      Address: '4'
+      Format: MaskedBool
+      Scale: '1'
+      IP: 192.168.66.10
+      Ide: '208'
+      q_name_cs: Stav RNN2
+      defaultJednotky: Stav
+      id: '62'
+      symbol: Stav
+  - name: MKTWDBERNARTICE Stav RNN3
+    state: '{{ is_state(''binary_sensor.mktwdbernartice_stav_rnn3'', ''on'') }}'
+    unique_id: mktwdbernartice_stav_rnn3
+    attributes:
+      Node: MKTWDBERNARTICE
+      qname: Stav RNN3
+      Address: '6'
+      Format: MaskedBool
+      Scale: '1'
+      IP: 192.168.66.10
+      Ide: '208'
+      q_name_cs: Stav RNN3
+      defaultJednotky: Stav
+      id: '62'
+      symbol: Stav
+  - name: MKTWDBERNARTICE Data OK
+    state: '{{ is_state(''binary_sensor.mktwdbernartice_data_ok'', ''on'') }}'
+    unique_id: mktwdbernartice_data_ok
+    attributes:
+      Node: MKTWDBERNARTICE
+      qname: Data OK
+      Address: '7'
+      Format: MaskedBool
+      Scale: '1'
+      IP: 192.168.66.10
+      Ide: '208'
+      q_name_cs: Data OK
+      defaultJednotky: Stav
+      id: '62'
+      symbol: Stav

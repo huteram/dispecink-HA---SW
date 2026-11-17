@@ -1,0 +1,196 @@
+modbus:
+- name: MKTWDBERNARTICE
+  type: tcp
+  host: 192.168.66.10
+  port: 502
+  delay: 60
+  sensor:
+  - name: MKTWDBERNARTICE EP vyr
+    address: 18
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_ep_vyr
+    unit_of_measurement: kWh
+    swap: word
+  - name: MKTWDBERNARTICE EP spotr
+    address: 22
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_ep_spotr
+    unit_of_measurement: kWh
+    swap: word
+  - name: MKTWDBERNARTICE EQ spotr
+    address: 36
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_eq_spotr
+    unit_of_measurement: kVARh
+    swap: word
+  - name: MKTWDBERNARTICE EQ vyr
+    address: 46
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_eq_vyr
+    unit_of_measurement: kVARh
+    swap: word
+  - name: MKTWDBERNARTICE cos FI
+    address: 50
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_cos_fi
+    unit_of_measurement: 1
+    swap: word
+  - name: MKTWDBERNARTICE POR FVE
+    address: 70
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_por_fve
+    unit_of_measurement: Stav
+  - name: MKTWDBERNARTICE REG P
+    address: 90
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_reg_p
+    unit_of_measurement: '%'
+  - name: MKTWDBERNARTICE REG Q
+    address: 91
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_reg_q
+    unit_of_measurement: 1
+    swap: word
+  - name: MKTWDBERNARTICE I L1
+    address: 507
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_i_l1
+    unit_of_measurement: A
+  - name: MKTWDBERNARTICE I L3
+    address: 509
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_i_l3
+    unit_of_measurement: A
+  - name: MKTWDBERNARTICE U L1 L2
+    address: 527
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_u_l1_l2
+    unit_of_measurement: V
+  - name: MKTWDBERNARTICE U L2
+    address: 528
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_u_l2
+    unit_of_measurement: V
+  - name: MKTWDBERNARTICE U L3
+    address: 529
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_u_l3
+    unit_of_measurement: V
+  - name: MKTWDBERNARTICE P Celk
+    address: 550
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_p_celk
+    unit_of_measurement: kW
+  - name: MKTWDBERNARTICE Q Celk
+    address: 554
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_q_celk
+    unit_of_measurement: kVAr
+  - name: MKTWDBERNARTICE S Celk
+    address: 558
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_s_celk
+    unit_of_measurement: kVA
+  - name: MKTWDBERNARTICE Osvit
+    address: 722
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_osvit
+    unit_of_measurement: W/m<sup>2</sup>
+    swap: word
+  binary_sensor:
+  - name: MKTWDBERNARTICE POR FVE
+    address: 70
+    input_type: coil
+    unique_id: mktwdbernartice_por_fve
+  - name: MKTWDBERNARTICE Stav RNN1
+    address: 74
+    input_type: coil
+    unique_id: mktwdbernartice_stav_rnn1
+  - name: MKTWDBERNARTICE Stav RNN1
+    address: 74
+    input_type: coil
+    unique_id: mktwdbernartice_stav_rnn1
+  - name: MKTWDBERNARTICE Stav RNN2
+    address: 75
+    input_type: coil
+    unique_id: mktwdbernartice_stav_rnn2
+  - name: MKTWDBERNARTICE Stav RNN2
+    address: 75
+    input_type: coil
+    unique_id: mktwdbernartice_stav_rnn2
+  - name: MKTWDBERNARTICE Stav RNN3
+    address: 77
+    input_type: coil
+    unique_id: mktwdbernartice_stav_rnn3
+  - name: MKTWDBERNARTICE Data OK
+    address: 98
+    input_type: coil
+    unique_id: mktwdbernartice_data_ok

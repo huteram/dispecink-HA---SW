@@ -1,0 +1,289 @@
+template:
+- - name: MKTWDBERNARTICE EP vyr
+    state: '{{ states(''sensor.mktwdbernartice_ep_vyr'') }}'
+    unit_of_measurement: kWh
+    unique_id: mktwdbernartice_ep_vyr
+    attributes:
+      Node: MKTWDBERNARTICE
+      qname: EP vyr.
+      Address: '18'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.66.10
+      Ide: '208'
+      q_name_cs: Činná energie vyrobená
+      defaultJednotky: kWh
+      id: '28'
+      symbol: kWh
+      name_cs: Kilowatt-Hodin
+  - name: MKTWDBERNARTICE EP spotr
+    state: '{{ states(''sensor.mktwdbernartice_ep_spotr'') }}'
+    unit_of_measurement: kWh
+    unique_id: mktwdbernartice_ep_spotr
+    attributes:
+      Node: MKTWDBERNARTICE
+      qname: EP spotr.
+      Address: '22'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.66.10
+      Ide: '208'
+      q_name_cs: Činná energie spotřebovaná
+      defaultJednotky: kWh
+      id: '28'
+      symbol: kWh
+      name_cs: Kilowatt-Hodin
+  - name: MKTWDBERNARTICE EQ spotr
+    state: '{{ states(''sensor.mktwdbernartice_eq_spotr'') }}'
+    unit_of_measurement: kVARh
+    unique_id: mktwdbernartice_eq_spotr
+    attributes:
+      Node: MKTWDBERNARTICE
+      qname: EQ spotr.
+      Address: '36'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.66.10
+      Ide: '208'
+      q_name_cs: Jalová energie spotřebovaná [elektroměr]
+      defaultJednotky: kVARh
+      id: '44'
+      symbol: kVARh
+      name_cs: Kilovoltampér-reaktančních-Hodin
+  - name: MKTWDBERNARTICE EQ vyr
+    state: '{{ states(''sensor.mktwdbernartice_eq_vyr'') }}'
+    unit_of_measurement: kVARh
+    unique_id: mktwdbernartice_eq_vyr
+    attributes:
+      Node: MKTWDBERNARTICE
+      qname: EQ vyr.
+      Address: '46'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.66.10
+      Ide: '208'
+      q_name_cs: Jalová energie vyrobená [elektroměr]
+      defaultJednotky: kVARh
+      id: '44'
+      symbol: kVARh
+      name_cs: Kilovoltampér-reaktančních-Hodin
+  - name: MKTWDBERNARTICE cos FI
+    state: '{{ states(''sensor.mktwdbernartice_cos_fi'') }}'
+    unit_of_measurement: 1
+    unique_id: mktwdbernartice_cos_fi
+    attributes:
+      Node: MKTWDBERNARTICE
+      qname: cos FI
+      Address: '50'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.66.10
+      Ide: '208'
+      q_name_cs: Účinník
+      defaultJednotky: '1'
+      id: '1'
+      symbol: '1'
+      name_cs: bezrozměrná
+  - name: MKTWDBERNARTICE POR FVE
+    state: '{{ states(''sensor.mktwdbernartice_por_fve'') }}'
+    unit_of_measurement: Stav
+    unique_id: mktwdbernartice_por_fve
+    attributes:
+      Node: MKTWDBERNARTICE
+      qname: POR FVE
+      Address: '70'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.66.10
+      Ide: '208'
+      q_name_cs: Stav FVE
+      defaultJednotky: Stav
+      id: '62'
+      symbol: Stav
+  - name: MKTWDBERNARTICE REG P
+    state: '{{ states(''sensor.mktwdbernartice_reg_p'') }}'
+    unit_of_measurement: '%'
+    unique_id: mktwdbernartice_reg_p
+    attributes:
+      Node: MKTWDBERNARTICE
+      qname: REG P
+      Address: '90'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.66.10
+      Ide: '208'
+      q_name_cs: Regulace P
+      defaultJednotky: '%'
+      id: '12'
+      symbol: '%'
+      name_cs: Procenta
+  - name: MKTWDBERNARTICE REG Q
+    state: '{{ states(''sensor.mktwdbernartice_reg_q'') }}'
+    unit_of_measurement: 1
+    unique_id: mktwdbernartice_reg_q
+    attributes:
+      Node: MKTWDBERNARTICE
+      qname: REG Q
+      Address: '91'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.66.10
+      Ide: '208'
+      q_name_cs: Regulace Q
+      defaultJednotky: '1'
+      id: '1'
+      symbol: '1'
+      name_cs: bezrozměrná
+  - name: MKTWDBERNARTICE I L1
+    state: '{{ states(''sensor.mktwdbernartice_i_l1'') }}'
+    unit_of_measurement: A
+    unique_id: mktwdbernartice_i_l1
+    attributes:
+      Node: MKTWDBERNARTICE
+      qname: I L1
+      Address: '507'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.66.10
+      Ide: '208'
+      q_name_cs: Proud fází L1
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: MKTWDBERNARTICE I L3
+    state: '{{ states(''sensor.mktwdbernartice_i_l3'') }}'
+    unit_of_measurement: A
+    unique_id: mktwdbernartice_i_l3
+    attributes:
+      Node: MKTWDBERNARTICE
+      qname: I L3
+      Address: '509'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.66.10
+      Ide: '208'
+      q_name_cs: Proud fází L3
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: MKTWDBERNARTICE U L1 L2
+    state: '{{ states(''sensor.mktwdbernartice_u_l1_l2'') }}'
+    unit_of_measurement: V
+    unique_id: mktwdbernartice_u_l1_l2
+    attributes:
+      Node: MKTWDBERNARTICE
+      qname: U L1-L2
+      Address: '527'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.66.10
+      Ide: '208'
+      q_name_cs: Napětí sdružené L1-L2
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: MKTWDBERNARTICE U L2
+    state: '{{ states(''sensor.mktwdbernartice_u_l2'') }}'
+    unit_of_measurement: V
+    unique_id: mktwdbernartice_u_l2
+    attributes:
+      Node: MKTWDBERNARTICE
+      qname: U L2
+      Address: '528'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.66.10
+      Ide: '208'
+      q_name_cs: Napětí fázové L2
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: MKTWDBERNARTICE U L3
+    state: '{{ states(''sensor.mktwdbernartice_u_l3'') }}'
+    unit_of_measurement: V
+    unique_id: mktwdbernartice_u_l3
+    attributes:
+      Node: MKTWDBERNARTICE
+      qname: U L3
+      Address: '529'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.66.10
+      Ide: '208'
+      q_name_cs: Napětí fázové L3
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: MKTWDBERNARTICE P Celk
+    state: '{{ states(''sensor.mktwdbernartice_p_celk'') }}'
+    unit_of_measurement: kW
+    unique_id: mktwdbernartice_p_celk
+    attributes:
+      Node: MKTWDBERNARTICE
+      qname: P Celk.
+      Address: '550'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.66.10
+      Ide: '208'
+      q_name_cs: Činný výkon okamžitý
+      defaultJednotky: kW
+      id: '21'
+      symbol: kW
+      name_cs: Kilowatty
+  - name: MKTWDBERNARTICE Q Celk
+    state: '{{ states(''sensor.mktwdbernartice_q_celk'') }}'
+    unit_of_measurement: kVAr
+    unique_id: mktwdbernartice_q_celk
+    attributes:
+      Node: MKTWDBERNARTICE
+      qname: Q Celk.
+      Address: '554'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.66.10
+      Ide: '208'
+      q_name_cs: Jalový výkon okamžitý
+      defaultJednotky: kVAr
+      id: '23'
+      symbol: kVAr
+      name_cs: Kilovolampér reaktanční
+  - name: MKTWDBERNARTICE S Celk
+    state: '{{ states(''sensor.mktwdbernartice_s_celk'') }}'
+    unit_of_measurement: kVA
+    unique_id: mktwdbernartice_s_celk
+    attributes:
+      Node: MKTWDBERNARTICE
+      qname: S Celk.
+      Address: '558'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.66.10
+      Ide: '208'
+      q_name_cs: Zdánlivý výkon okamžitý
+      defaultJednotky: kVA
+      id: '22'
+      symbol: kVA
+      name_cs: Kilovoltampéry
+  - name: MKTWDBERNARTICE Osvit
+    state: '{{ states(''sensor.mktwdbernartice_osvit'') }}'
+    unit_of_measurement: W/m<sup>2</sup>
+    unique_id: mktwdbernartice_osvit
+    attributes:
+      Node: MKTWDBERNARTICE
+      qname: Osvit
+      Address: '722'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.66.10
+      Ide: '208'
+      q_name_cs: Osvit
+      defaultJednotky: W/m<sup>2</sup>
+      id: '11'
+      symbol: W/m<sup>2</sup>
+      name_cs: watt/metr<sup>2</sup>

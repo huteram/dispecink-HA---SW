@@ -1,0 +1,152 @@
+views:
+- type: sections
+  sections:
+  - type: grid
+    cards:
+    - type: heading
+      heading: MKTWDBERNARTICE
+      heading_style: title
+    - type: tile
+      entity: binary_sensor.mktwdbernartice_por_fve
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: binary_sensor.mktwdbernartice_stav_rnn1
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: binary_sensor.mktwdbernartice_stav_rnn1
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: binary_sensor.mktwdbernartice_stav_rnn2
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: binary_sensor.mktwdbernartice_stav_rnn2
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: binary_sensor.mktwdbernartice_stav_rnn3
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: binary_sensor.mktwdbernartice_data_ok
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.mktwdbernartice_ep_vyr
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.mktwdbernartice_ep_spotr
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.mktwdbernartice_eq_spotr
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.mktwdbernartice_eq_vyr
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.mktwdbernartice_cos_fi
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.mktwdbernartice_por_fve
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.mktwdbernartice_reg_p
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.mktwdbernartice_reg_q
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.mktwdbernartice_i_l1
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.mktwdbernartice_i_l3
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.mktwdbernartice_u_l1_l2
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.mktwdbernartice_u_l2
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.mktwdbernartice_u_l3
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.mktwdbernartice_p_celk
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.mktwdbernartice_q_celk
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.mktwdbernartice_s_celk
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.mktwdbernartice_osvit
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full

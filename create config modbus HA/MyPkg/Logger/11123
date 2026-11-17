@@ -1,0 +1,2 @@
+CRC check: ERROR
+{'info': ['Info block'], 'crc': 'ee7b5e', 'ide': 123L, 'data': [{'idd': 1, 'idu': 62L, 'qname': u'POR FVE', 'value': 1}, {'idd': 1, 'idu': 62L, 'qname': u'Stav RNN1', 'value': 1}, {'idd': 1, 'idu': 62L, 'qname': u'Stav RNN1', 'value': 1}, {'idd': 1, 'idu': 62L, 'qname': u'Stav RNN2', 'value': 1}, {'idd': 1, 'idu': 62L, 'qname': u'Stav RNN2', 'value': 1}, {'idd': 1, 'idu': 62L, 'qname': u'Stav RNN3', 'value': 1}, {'idd': 1, 'idu': 62L, 'qname': u'Data OK', 'value': 1}, {'idd': 1, 'idu': 13L, 'qname': u'EP vyr.', 'value': 2.44e-10}], 'format': 1}

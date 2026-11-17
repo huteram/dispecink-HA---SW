@@ -1,196 +1,1742 @@
 modbus:
-- name: MKTWDBERNARTICE
+- name: FVEDEMO
   type: tcp
-  host: 192.168.66.10
+  host: 192.168.50.106
   port: 502
   delay: 60
   sensor:
-  - name: MKTWDBERNARTICE EP vyr
-    address: 18
+  - name: FVEDEMO Osvit raw
+    address: 504
     input_type: holding
     data_type: float32
     scale: 1.0
     precision: 2
     device_class: area
-    unique_id: mktwdbernartice_ep_vyr
-    unit_of_measurement: kWh
+    unique_id: fvedemo_osvit_raw
+    unit_of_measurement: W/m<sup>2</sup>
     swap: word
-  - name: MKTWDBERNARTICE EP spotr
-    address: 22
+  - name: FVEDEMO Tep out raw
+    address: 498
     input_type: holding
     data_type: float32
     scale: 1.0
     precision: 2
     device_class: area
-    unique_id: mktwdbernartice_ep_spotr
-    unit_of_measurement: kWh
+    unique_id: fvedemo_tep_out_raw
+    unit_of_measurement: "\xB0C"
     swap: word
-  - name: MKTWDBERNARTICE EQ spotr
-    address: 36
+  - name: FVEDEMO U L1 L2 raw
+    address: 625
     input_type: holding
-    data_type: float32
+    data_type: int16
     scale: 1.0
     precision: 2
     device_class: area
-    unique_id: mktwdbernartice_eq_spotr
-    unit_of_measurement: kVARh
-    swap: word
-  - name: MKTWDBERNARTICE EQ vyr
-    address: 46
+    unique_id: fvedemo_u_l1_l2_raw
+    unit_of_measurement: V
+  - name: FVEDEMO P Celk raw
+    address: 648
     input_type: holding
-    data_type: float32
+    data_type: int16
     scale: 1.0
     precision: 2
     device_class: area
-    unique_id: mktwdbernartice_eq_vyr
-    unit_of_measurement: kVARh
-    swap: word
-  - name: MKTWDBERNARTICE cos FI
-    address: 50
+    unique_id: fvedemo_p_celk_raw
+    unit_of_measurement: kW
+  - name: FVEDEMO U L2 L3 raw
+    address: 626
     input_type: holding
-    data_type: float32
+    data_type: int16
     scale: 1.0
     precision: 2
     device_class: area
-    unique_id: mktwdbernartice_cos_fi
-    unit_of_measurement: 1
-    swap: word
-  - name: MKTWDBERNARTICE POR FVE
-    address: 70
+    unique_id: fvedemo_u_l2_l3_raw
+    unit_of_measurement: V
+  - name: FVEDEMO U L3 L1 raw
+    address: 627
     input_type: holding
-    data_type: uint16
+    data_type: int16
     scale: 1.0
     precision: 2
     device_class: area
-    unique_id: mktwdbernartice_por_fve
-    unit_of_measurement: Stav
-  - name: MKTWDBERNARTICE REG P
-    address: 90
+    unique_id: fvedemo_u_l3_l1_raw
+    unit_of_measurement: V
+  - name: FVEDEMO P L2 raw
+    address: 646
     input_type: holding
-    data_type: uint16
+    data_type: int16
     scale: 1.0
     precision: 2
     device_class: area
-    unique_id: mktwdbernartice_reg_p
+    unique_id: fvedemo_p_l2_raw
+    unit_of_measurement: kW
+  - name: FVEDEMO P L1 raw
+    address: 645
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvedemo_p_l1_raw
+    unit_of_measurement: kW
+  - name: FVEDEMO P L3 raw
+    address: 647
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvedemo_p_l3_raw
+    unit_of_measurement: kW
+  - name: FVEDEMO I L1 raw
+    address: 605
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvedemo_i_l1_raw
+    unit_of_measurement: A
+  - name: FVEDEMO I L2 raw
+    address: 606
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvedemo_i_l2_raw
+    unit_of_measurement: A
+  - name: FVEDEMO I L3 raw
+    address: 607
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvedemo_i_l3_raw
+    unit_of_measurement: A
+  - name: FVEDEMO I Unbal raw
+    address: 615
+    input_type: holding
+    data_type: int16
+    scale: 0.1
+    precision: 2
+    device_class: area
+    unique_id: fvedemo_i_unbal_raw
     unit_of_measurement: '%'
-  - name: MKTWDBERNARTICE REG Q
-    address: 91
+  - name: FVEDEMO U L1 raw
+    address: 629
     input_type: holding
-    data_type: float32
+    data_type: int16
     scale: 1.0
     precision: 2
     device_class: area
-    unique_id: mktwdbernartice_reg_q
+    unique_id: fvedemo_u_l1_raw
+    unit_of_measurement: V
+  - name: FVEDEMO U L2 raw
+    address: 630
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvedemo_u_l2_raw
+    unit_of_measurement: V
+  - name: FVEDEMO U L3 raw
+    address: 631
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvedemo_u_l3_raw
+    unit_of_measurement: V
+  - name: FVEDEMO U Unbal raw
+    address: 641
+    input_type: holding
+    data_type: int16
+    scale: 0.1
+    precision: 2
+    device_class: area
+    unique_id: fvedemo_u_unbal_raw
+    unit_of_measurement: '%'
+  - name: FVEDEMO U U Unbal raw
+    address: 637
+    input_type: holding
+    data_type: int16
+    scale: 0.1
+    precision: 2
+    device_class: area
+    unique_id: fvedemo_u_u_unbal_raw
+    unit_of_measurement: '%'
+  - name: FVEDEMO Q L1 raw
+    address: 649
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvedemo_q_l1_raw
+    unit_of_measurement: kVAr
+  - name: FVEDEMO Q L2 raw
+    address: 650
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvedemo_q_l2_raw
+    unit_of_measurement: kVAr
+  - name: FVEDEMO Q L3 raw
+    address: 651
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvedemo_q_l3_raw
+    unit_of_measurement: kVAr
+  - name: FVEDEMO Q Celk raw
+    address: 652
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvedemo_q_celk_raw
+    unit_of_measurement: kVAr
+  - name: FVEDEMO cos FI raw
+    address: 668
+    input_type: holding
+    data_type: int16
+    scale: 0.001
+    precision: 2
+    device_class: area
+    unique_id: fvedemo_cos_fi_raw
     unit_of_measurement: 1
-    swap: word
-  - name: MKTWDBERNARTICE I L1
+  - name: FVEDEMO Frekvence raw
+    address: 685
+    input_type: holding
+    data_type: int16
+    scale: 0.01
+    precision: 2
+    device_class: area
+    unique_id: fvedemo_frekvence_raw
+    unit_of_measurement: Hz
+  - name: FVEDEMO EP vyr raw
+    address: 700
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvedemo_ep_vyr_raw
+    unit_of_measurement: kWh
+- name: FVEKOTHEN1
+  type: tcp
+  host: 192.168.72.10
+  port: 502
+  delay: 60
+  sensor:
+  - name: FVEKOTHEN1 I L1 raw
     address: 507
     input_type: holding
     data_type: uint16
-    scale: 1.0
+    scale: 0.1
     precision: 2
     device_class: area
-    unique_id: mktwdbernartice_i_l1
+    unique_id: fvekothen1_i_l1_raw
     unit_of_measurement: A
-  - name: MKTWDBERNARTICE I L3
+  - name: FVEKOTHEN1 I L2 raw
+    address: 508
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    precision: 2
+    device_class: area
+    unique_id: fvekothen1_i_l2_raw
+    unit_of_measurement: A
+  - name: FVEKOTHEN1 I L3 raw
     address: 509
     input_type: holding
     data_type: uint16
-    scale: 1.0
+    scale: 0.1
     precision: 2
     device_class: area
-    unique_id: mktwdbernartice_i_l3
+    unique_id: fvekothen1_i_l3_raw
     unit_of_measurement: A
-  - name: MKTWDBERNARTICE U L1 L2
-    address: 527
+  - name: FVEKOTHEN1 U L1 L2 raw
+    address: 511
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    precision: 2
+    device_class: area
+    unique_id: fvekothen1_u_l1_l2_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN1 U L2 L3 raw
+    address: 512
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    precision: 2
+    device_class: area
+    unique_id: fvekothen1_u_l2_l3_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN1 U L3 L1 raw
+    address: 513
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    precision: 2
+    device_class: area
+    unique_id: fvekothen1_u_l3_l1_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN1 U L1 raw
+    address: 514
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    precision: 2
+    device_class: area
+    unique_id: fvekothen1_u_l1_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN1 U L2 raw
+    address: 515
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    precision: 2
+    device_class: area
+    unique_id: fvekothen1_u_l2_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN1 U L3 raw
+    address: 516
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    precision: 2
+    device_class: area
+    unique_id: fvekothen1_u_l3_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN1 Frekvence raw
+    address: 517
+    input_type: holding
+    data_type: uint16
+    scale: 0.01
+    precision: 2
+    device_class: area
+    unique_id: fvekothen1_frekvence_raw
+    unit_of_measurement: Hz
+  - name: FVEKOTHEN1 P Celk raw
+    address: 518
     input_type: holding
     data_type: uint16
     scale: 1.0
     precision: 2
     device_class: area
-    unique_id: mktwdbernartice_u_l1_l2
-    unit_of_measurement: V
-  - name: MKTWDBERNARTICE U L2
-    address: 528
-    input_type: holding
-    data_type: uint16
-    scale: 1.0
-    precision: 2
-    device_class: area
-    unique_id: mktwdbernartice_u_l2
-    unit_of_measurement: V
-  - name: MKTWDBERNARTICE U L3
-    address: 529
-    input_type: holding
-    data_type: uint16
-    scale: 1.0
-    precision: 2
-    device_class: area
-    unique_id: mktwdbernartice_u_l3
-    unit_of_measurement: V
-  - name: MKTWDBERNARTICE P Celk
-    address: 550
-    input_type: holding
-    data_type: int16
-    scale: 1.0
-    precision: 2
-    device_class: area
-    unique_id: mktwdbernartice_p_celk
+    unique_id: fvekothen1_p_celk_raw
     unit_of_measurement: kW
-  - name: MKTWDBERNARTICE Q Celk
-    address: 554
+  - name: FVEKOTHEN1 Q Celk raw
+    address: 519
     input_type: holding
-    data_type: int16
+    data_type: uint16
     scale: 1.0
     precision: 2
     device_class: area
-    unique_id: mktwdbernartice_q_celk
+    unique_id: fvekothen1_q_celk_raw
     unit_of_measurement: kVAr
-  - name: MKTWDBERNARTICE S Celk
-    address: 558
+  - name: FVEKOTHEN1 S Celk raw
+    address: 520
     input_type: holding
-    data_type: int16
+    data_type: uint16
     scale: 1.0
     precision: 2
     device_class: area
-    unique_id: mktwdbernartice_s_celk
+    unique_id: fvekothen1_s_celk_raw
     unit_of_measurement: kVA
-  - name: MKTWDBERNARTICE Osvit
+  - name: FVEKOTHEN1 cos FI raw
+    address: 521
+    input_type: holding
+    data_type: float32
+    scale: 0.1
+    precision: 2
+    device_class: area
+    unique_id: fvekothen1_cos_fi_raw
+    unit_of_measurement: 1
+    swap: word
+  - name: FVEKOTHEN1 Osvit raw
     address: 722
     input_type: holding
     data_type: float32
     scale: 1.0
     precision: 2
     device_class: area
-    unique_id: mktwdbernartice_osvit
+    unique_id: fvekothen1_osvit_raw
     unit_of_measurement: W/m<sup>2</sup>
     swap: word
   binary_sensor:
-  - name: MKTWDBERNARTICE POR FVE
-    address: 70
-    input_type: coil
-    unique_id: mktwdbernartice_por_fve
-  - name: MKTWDBERNARTICE Stav RNN1
-    address: 74
-    input_type: coil
-    unique_id: mktwdbernartice_stav_rnn1
-  - name: MKTWDBERNARTICE Stav RNN1
-    address: 74
-    input_type: coil
-    unique_id: mktwdbernartice_stav_rnn1
-  - name: MKTWDBERNARTICE Stav RNN2
-    address: 75
-    input_type: coil
-    unique_id: mktwdbernartice_stav_rnn2
-  - name: MKTWDBERNARTICE Stav RNN2
-    address: 75
-    input_type: coil
-    unique_id: mktwdbernartice_stav_rnn2
-  - name: MKTWDBERNARTICE Stav RNN3
-    address: 77
-    input_type: coil
-    unique_id: mktwdbernartice_stav_rnn3
-  - name: MKTWDBERNARTICE Data OK
+  - name: FVEKOTHEN1 Data OK raw
     address: 98
     input_type: coil
-    unique_id: mktwdbernartice_data_ok
+    unique_id: fvekothen1_data_ok_raw
+- name: FVEKOTHEN110KV
+  type: tcp
+  host: 192.168.75.10
+  port: 502
+  delay: 60
+  sensor:
+  - name: FVEKOTHEN110KV EP vyr raw
+    address: 18
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen110kv_ep_vyr_raw
+    unit_of_measurement: kWh
+    swap: word
+  - name: FVEKOTHEN110KV EP spotr raw
+    address: 22
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen110kv_ep_spotr_raw
+    unit_of_measurement: kWh
+    swap: word
+  - name: FVEKOTHEN110KV EQ spotr raw
+    address: 36
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen110kv_eq_spotr_raw
+    unit_of_measurement: kVARh
+    swap: word
+  - name: FVEKOTHEN110KV EQ vyr raw
+    address: 46
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen110kv_eq_vyr_raw
+    unit_of_measurement: kVARh
+    swap: word
+  - name: FVEKOTHEN110KV cos FI raw
+    address: 50
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen110kv_cos_fi_raw
+    unit_of_measurement: 1
+    swap: word
+  - name: FVEKOTHEN110KV Frekvence raw
+    address: 87
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen110kv_frekvence_raw
+    unit_of_measurement: Hz
+  - name: FVEKOTHEN110KV I L1 raw
+    address: 507
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen110kv_i_l1_raw
+    unit_of_measurement: A
+  - name: FVEKOTHEN110KV I L2 raw
+    address: 508
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen110kv_i_l2_raw
+    unit_of_measurement: A
+  - name: FVEKOTHEN110KV I L3 raw
+    address: 509
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen110kv_i_l3_raw
+    unit_of_measurement: A
+  - name: FVEKOTHEN110KV I Unbal raw
+    address: 516
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen110kv_i_unbal_raw
+    unit_of_measurement: '%'
+  - name: FVEKOTHEN110KV U L1 L2 raw
+    address: 527
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen110kv_u_l1_l2_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN110KV U L2 L3 raw
+    address: 528
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen110kv_u_l2_l3_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN110KV U L3 L1 raw
+    address: 529
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen110kv_u_l3_l1_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN110KV U L1 raw
+    address: 531
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen110kv_u_l1_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN110KV U L2 raw
+    address: 532
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen110kv_u_l2_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN110KV U L3 raw
+    address: 533
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen110kv_u_l3_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN110KV U Unbal raw
+    address: 543
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen110kv_u_unbal_raw
+    unit_of_measurement: '%'
+  - name: FVEKOTHEN110KV P Celk raw
+    address: 550
+    input_type: holding
+    data_type: int16
+    scale: -1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen110kv_p_celk_raw
+    unit_of_measurement: kW
+  - name: FVEKOTHEN110KV Q Celk raw
+    address: 554
+    input_type: holding
+    data_type: int16
+    scale: -1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen110kv_q_celk_raw
+    unit_of_measurement: kVAr
+  - name: FVEKOTHEN110KV S Celk raw
+    address: 558
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen110kv_s_celk_raw
+    unit_of_measurement: kVA
+  - name: FVEKOTHEN110KV Osvit raw
+    address: 722
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen110kv_osvit_raw
+    unit_of_measurement: W/m<sup>2</sup>
+    swap: word
+  binary_sensor:
+  - name: FVEKOTHEN110KV Data OK raw
+    address: 98
+    input_type: coil
+    unique_id: fvekothen110kv_data_ok_raw
+- name: FVEKOTHEN2
+  type: tcp
+  host: 192.168.72.11
+  port: 502
+  delay: 60
+  sensor:
+  - name: FVEKOTHEN2 cos FI raw
+    address: 50
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen2_cos_fi_raw
+    unit_of_measurement: 1
+    swap: word
+  - name: FVEKOTHEN2 I L1 raw
+    address: 507
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen2_i_l1_raw
+    unit_of_measurement: A
+  - name: FVEKOTHEN2 I L2 raw
+    address: 508
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen2_i_l2_raw
+    unit_of_measurement: A
+  - name: FVEKOTHEN2 I L3 raw
+    address: 509
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen2_i_l3_raw
+    unit_of_measurement: A
+  - name: FVEKOTHEN2 I Unbal raw
+    address: 516
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    precision: 2
+    device_class: area
+    unique_id: fvekothen2_i_unbal_raw
+    unit_of_measurement: '%'
+  - name: FVEKOTHEN2 U L1 L2 raw
+    address: 527
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen2_u_l1_l2_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN2 U L2 L3 raw
+    address: 528
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen2_u_l2_l3_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN2 U L3 L1 raw
+    address: 529
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen2_u_l3_l1_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN2 U L1 raw
+    address: 531
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen2_u_l1_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN2 U L2 raw
+    address: 532
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen2_u_l2_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN2 U L3 raw
+    address: 533
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen2_u_l3_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN2 U Unbal raw
+    address: 543
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    precision: 2
+    device_class: area
+    unique_id: fvekothen2_u_unbal_raw
+    unit_of_measurement: '%'
+  - name: FVEKOTHEN2 P Celk raw
+    address: 550
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen2_p_celk_raw
+    unit_of_measurement: kW
+  - name: FVEKOTHEN2 Q Celk raw
+    address: 554
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen2_q_celk_raw
+    unit_of_measurement: kVAr
+  - name: FVEKOTHEN2 S Celk raw
+    address: 558
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen2_s_celk_raw
+    unit_of_measurement: kVA
+  binary_sensor:
+  - name: FVEKOTHEN2 Data OK raw
+    address: 98
+    input_type: coil
+    unique_id: fvekothen2_data_ok_raw
+- name: FVEKOTHEN3
+  type: tcp
+  host: 192.168.72.12
+  port: 502
+  delay: 60
+  sensor:
+  - name: FVEKOTHEN3 cos FI raw
+    address: 50
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen3_cos_fi_raw
+    unit_of_measurement: 1
+    swap: word
+  - name: FVEKOTHEN3 I L1 raw
+    address: 507
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen3_i_l1_raw
+    unit_of_measurement: A
+  - name: FVEKOTHEN3 I L2 raw
+    address: 508
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen3_i_l2_raw
+    unit_of_measurement: A
+  - name: FVEKOTHEN3 I L3 raw
+    address: 509
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen3_i_l3_raw
+    unit_of_measurement: A
+  - name: FVEKOTHEN3 I Unbal raw
+    address: 516
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    precision: 2
+    device_class: area
+    unique_id: fvekothen3_i_unbal_raw
+    unit_of_measurement: '%'
+  - name: FVEKOTHEN3 U L1 L2 raw
+    address: 527
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen3_u_l1_l2_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN3 U L2 L3 raw
+    address: 528
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen3_u_l2_l3_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN3 U L3 L1 raw
+    address: 529
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen3_u_l3_l1_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN3 U L1 raw
+    address: 531
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen3_u_l1_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN3 U L2 raw
+    address: 532
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen3_u_l2_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN3 U L3 raw
+    address: 533
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen3_u_l3_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN3 U Unbal raw
+    address: 543
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    precision: 2
+    device_class: area
+    unique_id: fvekothen3_u_unbal_raw
+    unit_of_measurement: '%'
+  - name: FVEKOTHEN3 P Celk raw
+    address: 550
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen3_p_celk_raw
+    unit_of_measurement: kW
+  - name: FVEKOTHEN3 Q Celk raw
+    address: 554
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen3_q_celk_raw
+    unit_of_measurement: kVAr
+  - name: FVEKOTHEN3 S Celk raw
+    address: 558
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen3_s_celk_raw
+    unit_of_measurement: kVA
+  binary_sensor:
+  - name: FVEKOTHEN3 Data OK raw
+    address: 98
+    input_type: coil
+    unique_id: fvekothen3_data_ok_raw
+- name: FVEKOTHEN4
+  type: tcp
+  host: 192.168.72.13
+  port: 502
+  delay: 60
+  sensor:
+  - name: FVEKOTHEN4 cos FI raw
+    address: 50
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen4_cos_fi_raw
+    unit_of_measurement: 1
+    swap: word
+  - name: FVEKOTHEN4 I L1 raw
+    address: 507
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen4_i_l1_raw
+    unit_of_measurement: A
+  - name: FVEKOTHEN4 I L2 raw
+    address: 508
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen4_i_l2_raw
+    unit_of_measurement: A
+  - name: FVEKOTHEN4 I L3 raw
+    address: 509
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen4_i_l3_raw
+    unit_of_measurement: A
+  - name: FVEKOTHEN4 I Unbal raw
+    address: 516
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    precision: 2
+    device_class: area
+    unique_id: fvekothen4_i_unbal_raw
+    unit_of_measurement: '%'
+  - name: FVEKOTHEN4 U L1 L2 raw
+    address: 527
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen4_u_l1_l2_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN4 U L2 L3 raw
+    address: 528
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen4_u_l2_l3_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN4 U L3 L1 raw
+    address: 529
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen4_u_l3_l1_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN4 U L1 raw
+    address: 531
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen4_u_l1_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN4 U L2 raw
+    address: 532
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen4_u_l2_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN4 U L3 raw
+    address: 533
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen4_u_l3_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN4 U Unbal raw
+    address: 543
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    precision: 2
+    device_class: area
+    unique_id: fvekothen4_u_unbal_raw
+    unit_of_measurement: '%'
+  - name: FVEKOTHEN4 P Celk raw
+    address: 550
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen4_p_celk_raw
+    unit_of_measurement: kW
+  - name: FVEKOTHEN4 Q Celk raw
+    address: 554
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen4_q_celk_raw
+    unit_of_measurement: kVAr
+  - name: FVEKOTHEN4 S Celk raw
+    address: 558
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen4_s_celk_raw
+    unit_of_measurement: kVA
+  binary_sensor:
+  - name: FVEKOTHEN4 Data OK raw
+    address: 98
+    input_type: coil
+    unique_id: fvekothen4_data_ok_raw
+- name: FVEKOTHEN5
+  type: tcp
+  host: 192.168.72.14
+  port: 502
+  delay: 60
+  sensor:
+  - name: FVEKOTHEN5 cos FI raw
+    address: 50
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen5_cos_fi_raw
+    unit_of_measurement: 1
+    swap: word
+  - name: FVEKOTHEN5 I L1 raw
+    address: 507
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen5_i_l1_raw
+    unit_of_measurement: A
+  - name: FVEKOTHEN5 I L2 raw
+    address: 508
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen5_i_l2_raw
+    unit_of_measurement: A
+  - name: FVEKOTHEN5 I L3 raw
+    address: 509
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen5_i_l3_raw
+    unit_of_measurement: A
+  - name: FVEKOTHEN5 I Unbal raw
+    address: 516
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    precision: 2
+    device_class: area
+    unique_id: fvekothen5_i_unbal_raw
+    unit_of_measurement: '%'
+  - name: FVEKOTHEN5 U L1 L2 raw
+    address: 527
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen5_u_l1_l2_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN5 U L2 L3 raw
+    address: 528
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen5_u_l2_l3_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN5 U L3 L1 raw
+    address: 529
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen5_u_l3_l1_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN5 U L1 raw
+    address: 531
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen5_u_l1_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN5 U L2 raw
+    address: 532
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen5_u_l2_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN5 U L3 raw
+    address: 533
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen5_u_l3_raw
+    unit_of_measurement: V
+  - name: FVEKOTHEN5 U Unbal raw
+    address: 543
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    precision: 2
+    device_class: area
+    unique_id: fvekothen5_u_unbal_raw
+    unit_of_measurement: '%'
+  - name: FVEKOTHEN5 P Celk raw
+    address: 550
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen5_p_celk_raw
+    unit_of_measurement: kW
+  - name: FVEKOTHEN5 Q Celk raw
+    address: 554
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen5_q_celk_raw
+    unit_of_measurement: kVAr
+  - name: FVEKOTHEN5 S Celk raw
+    address: 558
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvekothen5_s_celk_raw
+    unit_of_measurement: kVA
+  binary_sensor:
+  - name: FVEKOTHEN5 Data OK raw
+    address: 98
+    input_type: coil
+    unique_id: fvekothen5_data_ok_raw
+- name: FVEVELMOVICE
+  type: tcp
+  host: '192.168.74.10 '
+  port: 502
+  delay: 60
+  sensor:
+  - name: FVEVELMOVICE I L1 raw
+    address: 507
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvevelmovice_i_l1_raw
+    unit_of_measurement: A
+  - name: FVEVELMOVICE I L2 raw
+    address: 508
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvevelmovice_i_l2_raw
+    unit_of_measurement: A
+  - name: FVEVELMOVICE I L3 raw
+    address: 509
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvevelmovice_i_l3_raw
+    unit_of_measurement: A
+  - name: FVEVELMOVICE I Unbal raw
+    address: 516
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    precision: 2
+    device_class: area
+    unique_id: fvevelmovice_i_unbal_raw
+    unit_of_measurement: '%'
+  - name: FVEVELMOVICE U L1 L2 raw
+    address: 527
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvevelmovice_u_l1_l2_raw
+    unit_of_measurement: V
+  - name: FVEVELMOVICE U L2 L3 raw
+    address: 528
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvevelmovice_u_l2_l3_raw
+    unit_of_measurement: V
+  - name: FVEVELMOVICE U L3 L1 raw
+    address: 529
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvevelmovice_u_l3_l1_raw
+    unit_of_measurement: V
+  - name: FVEVELMOVICE U L1 raw
+    address: 531
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvevelmovice_u_l1_raw
+    unit_of_measurement: V
+  - name: FVEVELMOVICE U L2 raw
+    address: 532
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvevelmovice_u_l2_raw
+    unit_of_measurement: V
+  - name: FVEVELMOVICE U L3 raw
+    address: 533
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvevelmovice_u_l3_raw
+    unit_of_measurement: V
+  - name: FVEVELMOVICE U Unbal raw
+    address: 543
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    precision: 2
+    device_class: area
+    unique_id: fvevelmovice_u_unbal_raw
+    unit_of_measurement: '%'
+  - name: FVEVELMOVICE P Celk raw
+    address: 550
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvevelmovice_p_celk_raw
+    unit_of_measurement: kW
+  - name: FVEVELMOVICE Q Celk raw
+    address: 554
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvevelmovice_q_celk_raw
+    unit_of_measurement: kVAr
+  - name: FVEVELMOVICE S Celk raw
+    address: 558
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvevelmovice_s_celk_raw
+    unit_of_measurement: kVA
+  - name: FVEVELMOVICE Frekvence raw
+    address: 587
+    input_type: holding
+    data_type: uint16
+    scale: 0.01
+    precision: 2
+    device_class: area
+    unique_id: fvevelmovice_frekvence_raw
+    unit_of_measurement: Hz
+  - name: FVEVELMOVICE cos FI raw
+    address: 50
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvevelmovice_cos_fi_raw
+    unit_of_measurement: 1
+    swap: word
+  - name: FVEVELMOVICE EP vyr raw
+    address: 707
+    input_type: holding
+    data_type: uint16
+    scale: 0.001
+    precision: 2
+    device_class: area
+    unique_id: fvevelmovice_ep_vyr_raw
+    unit_of_measurement: kWh
+  - name: FVEVELMOVICE EP spotr raw
+    address: 715
+    input_type: holding
+    data_type: uint16
+    scale: 0.001
+    precision: 2
+    device_class: area
+    unique_id: fvevelmovice_ep_spotr_raw
+    unit_of_measurement: kWh
+  binary_sensor:
+  - name: FVEVELMOVICE Data OK raw
+    address: 98
+    input_type: coil
+    unique_id: fvevelmovice_data_ok_raw
+- name: FVEWETTIN
+  type: tcp
+  host: 192.168.71.10
+  port: 502
+  delay: 60
+  sensor:
+  - name: FVEWETTIN EP vyr raw
+    address: 18
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvewettin_ep_vyr_raw
+    unit_of_measurement: kWh
+    swap: word
+  - name: FVEWETTIN EP spotr raw
+    address: 22
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvewettin_ep_spotr_raw
+    unit_of_measurement: kWh
+    swap: word
+  - name: FVEWETTIN EQ spotr raw
+    address: 36
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvewettin_eq_spotr_raw
+    unit_of_measurement: kVARh
+    swap: word
+  - name: FVEWETTIN EQ vyr raw
+    address: 46
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvewettin_eq_vyr_raw
+    unit_of_measurement: kVARh
+    swap: word
+  - name: FVEWETTIN cos FI raw
+    address: 50
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvewettin_cos_fi_raw
+    unit_of_measurement: 1
+    swap: word
+  - name: FVEWETTIN I L1 raw
+    address: 507
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvewettin_i_l1_raw
+    unit_of_measurement: A
+  - name: FVEWETTIN I L2 raw
+    address: 508
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvewettin_i_l2_raw
+    unit_of_measurement: A
+  - name: FVEWETTIN I L3 raw
+    address: 509
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvewettin_i_l3_raw
+    unit_of_measurement: A
+  - name: FVEWETTIN I Unbal raw
+    address: 516
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    precision: 2
+    device_class: area
+    unique_id: fvewettin_i_unbal_raw
+    unit_of_measurement: '%'
+  - name: FVEWETTIN U L1 L2 raw
+    address: 527
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvewettin_u_l1_l2_raw
+    unit_of_measurement: V
+  - name: FVEWETTIN U L2 L3 raw
+    address: 528
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvewettin_u_l2_l3_raw
+    unit_of_measurement: V
+  - name: FVEWETTIN U L3 L1 raw
+    address: 529
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvewettin_u_l3_l1_raw
+    unit_of_measurement: V
+  - name: FVEWETTIN U L1 raw
+    address: 531
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvewettin_u_l1_raw
+    unit_of_measurement: V
+  - name: FVEWETTIN U L2 raw
+    address: 532
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvewettin_u_l2_raw
+    unit_of_measurement: V
+  - name: FVEWETTIN U L3 raw
+    address: 533
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvewettin_u_l3_raw
+    unit_of_measurement: V
+  - name: FVEWETTIN U Unbal raw
+    address: 543
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    precision: 2
+    device_class: area
+    unique_id: fvewettin_u_unbal_raw
+    unit_of_measurement: '%'
+  - name: FVEWETTIN P Celk raw
+    address: 550
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvewettin_p_celk_raw
+    unit_of_measurement: kW
+  - name: FVEWETTIN Q Celk raw
+    address: 554
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvewettin_q_celk_raw
+    unit_of_measurement: kVAr
+  - name: FVEWETTIN S Celk raw
+    address: 558
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvewettin_s_celk_raw
+    unit_of_measurement: kVA
+  - name: FVEWETTIN Osvit raw
+    address: 722
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: fvewettin_osvit_raw
+    unit_of_measurement: W/m<sup>2</sup>
+    swap: word
+  binary_sensor:
+  - name: FVEWETTIN Data OK raw
+    address: 98
+    input_type: coil
+    unique_id: fvewettin_data_ok_raw
+- name: MKTWDBERNARTICE
+  type: tcp
+  host: 192.168.66.10
+  port: 502
+  delay: 60
+  sensor:
+  - name: MKTWDBERNARTICE EP vyr raw
+    address: 18
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_ep_vyr_raw
+    unit_of_measurement: kWh
+    swap: word
+  - name: MKTWDBERNARTICE EP spotr raw
+    address: 22
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_ep_spotr_raw
+    unit_of_measurement: kWh
+    swap: word
+  - name: MKTWDBERNARTICE EQ spotr raw
+    address: 36
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_eq_spotr_raw
+    unit_of_measurement: kVARh
+    swap: word
+  - name: MKTWDBERNARTICE EQ vyr raw
+    address: 46
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_eq_vyr_raw
+    unit_of_measurement: kVARh
+    swap: word
+  - name: MKTWDBERNARTICE cos FI raw
+    address: 50
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_cos_fi_raw
+    unit_of_measurement: 1
+    swap: word
+  - name: MKTWDBERNARTICE POR FVE raw
+    address: 70
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_por_fve_raw
+    unit_of_measurement: Stav
+  - name: MKTWDBERNARTICE REG P raw
+    address: 90
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_reg_p_raw
+    unit_of_measurement: '%'
+  - name: MKTWDBERNARTICE REG Q raw
+    address: 91
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_reg_q_raw
+    unit_of_measurement: 1
+    swap: word
+  - name: MKTWDBERNARTICE I L1 raw
+    address: 507
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_i_l1_raw
+    unit_of_measurement: A
+  - name: MKTWDBERNARTICE I L3 raw
+    address: 509
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_i_l3_raw
+    unit_of_measurement: A
+  - name: MKTWDBERNARTICE U L1 L2 raw
+    address: 527
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_u_l1_l2_raw
+    unit_of_measurement: V
+  - name: MKTWDBERNARTICE U L2 raw
+    address: 528
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_u_l2_raw
+    unit_of_measurement: V
+  - name: MKTWDBERNARTICE U L3 raw
+    address: 529
+    input_type: holding
+    data_type: uint16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_u_l3_raw
+    unit_of_measurement: V
+  - name: MKTWDBERNARTICE P Celk raw
+    address: 550
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_p_celk_raw
+    unit_of_measurement: kW
+  - name: MKTWDBERNARTICE Q Celk raw
+    address: 554
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_q_celk_raw
+    unit_of_measurement: kVAr
+  - name: MKTWDBERNARTICE S Celk raw
+    address: 558
+    input_type: holding
+    data_type: int16
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_s_celk_raw
+    unit_of_measurement: kVA
+  - name: MKTWDBERNARTICE Osvit raw
+    address: 722
+    input_type: holding
+    data_type: float32
+    scale: 1.0
+    precision: 2
+    device_class: area
+    unique_id: mktwdbernartice_osvit_raw
+    unit_of_measurement: W/m<sup>2</sup>
+    swap: word
+  binary_sensor:
+  - name: MKTWDBERNARTICE POR FVE raw
+    address: 70
+    input_type: coil
+    unique_id: mktwdbernartice_por_fve_raw
+  - name: MKTWDBERNARTICE Stav RNN1 raw
+    address: 74
+    input_type: coil
+    unique_id: mktwdbernartice_stav_rnn1_raw
+  - name: MKTWDBERNARTICE Stav RNN1 raw
+    address: 74
+    input_type: coil
+    unique_id: mktwdbernartice_stav_rnn1_raw
+  - name: MKTWDBERNARTICE Stav RNN2 raw
+    address: 75
+    input_type: coil
+    unique_id: mktwdbernartice_stav_rnn2_raw
+  - name: MKTWDBERNARTICE Stav RNN2 raw
+    address: 75
+    input_type: coil
+    unique_id: mktwdbernartice_stav_rnn2_raw
+  - name: MKTWDBERNARTICE Stav RNN3 raw
+    address: 77
+    input_type: coil
+    unique_id: mktwdbernartice_stav_rnn3_raw
+  - name: MKTWDBERNARTICE Data OK raw
+    address: 98
+    input_type: coil
+    unique_id: mktwdbernartice_data_ok_raw

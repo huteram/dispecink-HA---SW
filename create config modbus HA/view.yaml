@@ -4,6 +4,1053 @@ views:
   - type: grid
     cards:
     - type: heading
+      heading: FVEDEMO
+      heading_style: title
+    - type: tile
+      entity: sensor.fvedemo_osvit_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvedemo_tep_out_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvedemo_u_l1_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvedemo_p_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvedemo_u_l2_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvedemo_u_l3_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvedemo_p_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvedemo_p_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvedemo_p_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvedemo_i_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvedemo_i_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvedemo_i_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvedemo_i_unbal_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvedemo_u_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvedemo_u_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvedemo_u_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvedemo_u_unbal_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvedemo_u_u_unbal_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvedemo_q_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvedemo_q_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvedemo_q_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvedemo_q_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvedemo_cos_fi_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvedemo_frekvence_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvedemo_ep_vyr_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+  - type: grid
+    cards:
+    - type: heading
+      heading: FVEKOTHEN1
+      heading_style: title
+    - type: tile
+      entity: binary_sensor.fvekothen1_data_ok
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen1_i_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen1_i_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen1_i_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen1_u_l1_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen1_u_l2_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen1_u_l3_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen1_u_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen1_u_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen1_u_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen1_frekvence_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen1_p_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen1_q_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen1_s_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen1_cos_fi_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen1_osvit_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+  - type: grid
+    cards:
+    - type: heading
+      heading: FVEKOTHEN110KV
+      heading_style: title
+    - type: tile
+      entity: binary_sensor.fvekothen110kv_data_ok
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen110kv_ep_vyr_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen110kv_ep_spotr_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen110kv_eq_spotr_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen110kv_eq_vyr_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen110kv_cos_fi_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen110kv_frekvence_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen110kv_i_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen110kv_i_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen110kv_i_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen110kv_i_unbal_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen110kv_u_l1_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen110kv_u_l2_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen110kv_u_l3_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen110kv_u_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen110kv_u_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen110kv_u_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen110kv_u_unbal_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen110kv_p_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen110kv_q_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen110kv_s_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen110kv_osvit_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+  - type: grid
+    cards:
+    - type: heading
+      heading: FVEKOTHEN2
+      heading_style: title
+    - type: tile
+      entity: binary_sensor.fvekothen2_data_ok
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen2_cos_fi_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen2_i_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen2_i_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen2_i_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen2_i_unbal_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen2_u_l1_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen2_u_l2_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen2_u_l3_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen2_u_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen2_u_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen2_u_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen2_u_unbal_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen2_p_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen2_q_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen2_s_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+  - type: grid
+    cards:
+    - type: heading
+      heading: FVEKOTHEN3
+      heading_style: title
+    - type: tile
+      entity: binary_sensor.fvekothen3_data_ok
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen3_cos_fi_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen3_i_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen3_i_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen3_i_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen3_i_unbal_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen3_u_l1_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen3_u_l2_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen3_u_l3_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen3_u_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen3_u_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen3_u_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen3_u_unbal_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen3_p_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen3_q_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen3_s_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+  - type: grid
+    cards:
+    - type: heading
+      heading: FVEKOTHEN4
+      heading_style: title
+    - type: tile
+      entity: binary_sensor.fvekothen4_data_ok
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen4_cos_fi_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen4_i_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen4_i_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen4_i_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen4_i_unbal_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen4_u_l1_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen4_u_l2_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen4_u_l3_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen4_u_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen4_u_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen4_u_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen4_u_unbal_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen4_p_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen4_q_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen4_s_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+  - type: grid
+    cards:
+    - type: heading
+      heading: FVEKOTHEN5
+      heading_style: title
+    - type: tile
+      entity: binary_sensor.fvekothen5_data_ok
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen5_cos_fi_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen5_i_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen5_i_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen5_i_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen5_i_unbal_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen5_u_l1_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen5_u_l2_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen5_u_l3_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen5_u_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen5_u_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen5_u_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen5_u_unbal_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen5_p_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen5_q_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvekothen5_s_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+  - type: grid
+    cards:
+    - type: heading
+      heading: FVEVELMOVICE
+      heading_style: title
+    - type: tile
+      entity: sensor.fvevelmovice_i_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvevelmovice_i_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvevelmovice_i_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvevelmovice_i_unbal_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvevelmovice_u_l1_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvevelmovice_u_l2_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvevelmovice_u_l3_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvevelmovice_u_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvevelmovice_u_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvevelmovice_u_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvevelmovice_u_unbal_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvevelmovice_p_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvevelmovice_q_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvevelmovice_s_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvevelmovice_frekvence_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvevelmovice_cos_fi_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvevelmovice_ep_vyr_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvevelmovice_ep_spotr_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: binary_sensor.fvevelmovice_data_ok
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+  - type: grid
+    cards:
+    - type: heading
+      heading: FVEWETTIN
+      heading_style: title
+    - type: tile
+      entity: binary_sensor.fvewettin_data_ok
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvewettin_ep_vyr_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvewettin_ep_spotr_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvewettin_eq_spotr_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvewettin_eq_vyr_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvewettin_cos_fi_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvewettin_i_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvewettin_i_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvewettin_i_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvewettin_i_unbal_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvewettin_u_l1_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvewettin_u_l2_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvewettin_u_l3_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvewettin_u_l1_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvewettin_u_l2_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvewettin_u_l3_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvewettin_u_unbal_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvewettin_p_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvewettin_q_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvewettin_s_celk_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+    - type: tile
+      entity: sensor.fvewettin_osvit_raw
+      features_position: bottom
+      vertical: 0
+      grid_options:
+        columns: full
+  - type: grid
+    cards:
+    - type: heading
       heading: MKTWDBERNARTICE
       heading_style: title
     - type: tile
@@ -49,103 +1096,103 @@ views:
       grid_options:
         columns: full
     - type: tile
-      entity: sensor.mktwdbernartice_ep_vyr
+      entity: sensor.mktwdbernartice_ep_vyr_raw
       features_position: bottom
       vertical: 0
       grid_options:
         columns: full
     - type: tile
-      entity: sensor.mktwdbernartice_ep_spotr
+      entity: sensor.mktwdbernartice_ep_spotr_raw
       features_position: bottom
       vertical: 0
       grid_options:
         columns: full
     - type: tile
-      entity: sensor.mktwdbernartice_eq_spotr
+      entity: sensor.mktwdbernartice_eq_spotr_raw
       features_position: bottom
       vertical: 0
       grid_options:
         columns: full
     - type: tile
-      entity: sensor.mktwdbernartice_eq_vyr
+      entity: sensor.mktwdbernartice_eq_vyr_raw
       features_position: bottom
       vertical: 0
       grid_options:
         columns: full
     - type: tile
-      entity: sensor.mktwdbernartice_cos_fi
+      entity: sensor.mktwdbernartice_cos_fi_raw
       features_position: bottom
       vertical: 0
       grid_options:
         columns: full
     - type: tile
-      entity: sensor.mktwdbernartice_por_fve
+      entity: sensor.mktwdbernartice_por_fve_raw
       features_position: bottom
       vertical: 0
       grid_options:
         columns: full
     - type: tile
-      entity: sensor.mktwdbernartice_reg_p
+      entity: sensor.mktwdbernartice_reg_p_raw
       features_position: bottom
       vertical: 0
       grid_options:
         columns: full
     - type: tile
-      entity: sensor.mktwdbernartice_reg_q
+      entity: sensor.mktwdbernartice_reg_q_raw
       features_position: bottom
       vertical: 0
       grid_options:
         columns: full
     - type: tile
-      entity: sensor.mktwdbernartice_i_l1
+      entity: sensor.mktwdbernartice_i_l1_raw
       features_position: bottom
       vertical: 0
       grid_options:
         columns: full
     - type: tile
-      entity: sensor.mktwdbernartice_i_l3
+      entity: sensor.mktwdbernartice_i_l3_raw
       features_position: bottom
       vertical: 0
       grid_options:
         columns: full
     - type: tile
-      entity: sensor.mktwdbernartice_u_l1_l2
+      entity: sensor.mktwdbernartice_u_l1_l2_raw
       features_position: bottom
       vertical: 0
       grid_options:
         columns: full
     - type: tile
-      entity: sensor.mktwdbernartice_u_l2
+      entity: sensor.mktwdbernartice_u_l2_raw
       features_position: bottom
       vertical: 0
       grid_options:
         columns: full
     - type: tile
-      entity: sensor.mktwdbernartice_u_l3
+      entity: sensor.mktwdbernartice_u_l3_raw
       features_position: bottom
       vertical: 0
       grid_options:
         columns: full
     - type: tile
-      entity: sensor.mktwdbernartice_p_celk
+      entity: sensor.mktwdbernartice_p_celk_raw
       features_position: bottom
       vertical: 0
       grid_options:
         columns: full
     - type: tile
-      entity: sensor.mktwdbernartice_q_celk
+      entity: sensor.mktwdbernartice_q_celk_raw
       features_position: bottom
       vertical: 0
       grid_options:
         columns: full
     - type: tile
-      entity: sensor.mktwdbernartice_s_celk
+      entity: sensor.mktwdbernartice_s_celk_raw
       features_position: bottom
       vertical: 0
       grid_options:
         columns: full
     - type: tile
-      entity: sensor.mktwdbernartice_osvit
+      entity: sensor.mktwdbernartice_osvit_raw
       features_position: bottom
       vertical: 0
       grid_options:

@@ -1,6 +1,126 @@
 template:
-- - name: MKTWDBERNARTICE POR FVE
-    state: '{{ is_state(''binary_sensor.mktwdbernartice_por_fve'', ''on'') }}'
+- - name: FVEKOTHEN1 Data OK
+    state: '{{ is_state(''binary_sensor.fvekothen1_data_ok_raw'', ''on'') }}'
+    unique_id: fvekothen1_data_ok
+    attributes:
+      Node: FVEKOTHEN1
+      qname: Data OK
+      Address: '7'
+      Format: MaskedBool
+      Scale: '1'
+      IP: 192.168.72.10
+      Ide: '201'
+      q_name_cs: Data OK
+      defaultJednotky: Stav
+      id: '62'
+      symbol: Stav
+  - name: FVEKOTHEN110KV Data OK
+    state: '{{ is_state(''binary_sensor.fvekothen110kv_data_ok_raw'', ''on'') }}'
+    unique_id: fvekothen110kv_data_ok
+    attributes:
+      Node: FVEKOTHEN110KV
+      qname: Data OK
+      Address: '7'
+      Format: MaskedBool
+      Scale: '1'
+      IP: 192.168.75.10
+      Ide: '206'
+      q_name_cs: Data OK
+      defaultJednotky: Stav
+      id: '62'
+      symbol: Stav
+  - name: FVEKOTHEN2 Data OK
+    state: '{{ is_state(''binary_sensor.fvekothen2_data_ok_raw'', ''on'') }}'
+    unique_id: fvekothen2_data_ok
+    attributes:
+      Node: FVEKOTHEN2
+      qname: Data OK
+      Address: '7'
+      Format: MaskedBool
+      Scale: '1'
+      IP: 192.168.72.11
+      Ide: '202'
+      q_name_cs: Data OK
+      defaultJednotky: Stav
+      id: '62'
+      symbol: Stav
+  - name: FVEKOTHEN3 Data OK
+    state: '{{ is_state(''binary_sensor.fvekothen3_data_ok_raw'', ''on'') }}'
+    unique_id: fvekothen3_data_ok
+    attributes:
+      Node: FVEKOTHEN3
+      qname: Data OK
+      Address: '7'
+      Format: MaskedBool
+      Scale: '1'
+      IP: 192.168.72.12
+      Ide: '203'
+      q_name_cs: Data OK
+      defaultJednotky: Stav
+      id: '62'
+      symbol: Stav
+  - name: FVEKOTHEN4 Data OK
+    state: '{{ is_state(''binary_sensor.fvekothen4_data_ok_raw'', ''on'') }}'
+    unique_id: fvekothen4_data_ok
+    attributes:
+      Node: FVEKOTHEN4
+      qname: Data OK
+      Address: '7'
+      Format: MaskedBool
+      Scale: '1'
+      IP: 192.168.72.13
+      Ide: '204'
+      q_name_cs: Data OK
+      defaultJednotky: Stav
+      id: '62'
+      symbol: Stav
+  - name: FVEKOTHEN5 Data OK
+    state: '{{ is_state(''binary_sensor.fvekothen5_data_ok_raw'', ''on'') }}'
+    unique_id: fvekothen5_data_ok
+    attributes:
+      Node: FVEKOTHEN5
+      qname: Data OK
+      Address: '7'
+      Format: MaskedBool
+      Scale: '1'
+      IP: 192.168.72.14
+      Ide: '205'
+      q_name_cs: Data OK
+      defaultJednotky: Stav
+      id: '62'
+      symbol: Stav
+  - name: FVEVELMOVICE Data OK
+    state: '{{ is_state(''binary_sensor.fvevelmovice_data_ok_raw'', ''on'') }}'
+    unique_id: fvevelmovice_data_ok
+    attributes:
+      Node: FVEVELMOVICE
+      qname: Data OK
+      Address: '7'
+      Format: MaskedBool
+      Scale: '1'
+      IP: '192.168.74.10 '
+      Ide: '209'
+      q_name_cs: Data OK
+      defaultJednotky: Stav
+      id: '62'
+      symbol: Stav
+  - name: FVEWETTIN Data OK
+    state: '{{ is_state(''binary_sensor.fvewettin_data_ok_raw'', ''on'') }}'
+    unique_id: fvewettin_data_ok
+    attributes:
+      Node: FVEWETTIN
+      qname: Data OK
+      Address: '7'
+      Format: MaskedBool
+      Scale: '1'
+      IP: 192.168.71.10
+      Ide: '207'
+      q_name_cs: Data OK
+      defaultJednotky: Stav
+      id: '62'
+      symbol: Stav
+  - name: MKTWDBERNARTICE POR FVE
+    state: '{{ is_state(''binary_sensor.mktwdbernartice_por_fve_raw'', ''on'') }}'
     unique_id: mktwdbernartice_por_fve
     attributes:
       Node: MKTWDBERNARTICE
@@ -15,7 +135,7 @@ template:
       id: '62'
       symbol: Stav
   - name: MKTWDBERNARTICE Stav RNN1
-    state: '{{ is_state(''binary_sensor.mktwdbernartice_stav_rnn1'', ''on'') }}'
+    state: '{{ is_state(''binary_sensor.mktwdbernartice_stav_rnn1_raw'', ''on'') }}'
     unique_id: mktwdbernartice_stav_rnn1
     attributes:
       Node: MKTWDBERNARTICE
@@ -30,7 +150,7 @@ template:
       id: '62'
       symbol: Stav
   - name: MKTWDBERNARTICE Stav RNN1
-    state: '{{ is_state(''binary_sensor.mktwdbernartice_stav_rnn1'', ''on'') }}'
+    state: '{{ is_state(''binary_sensor.mktwdbernartice_stav_rnn1_raw'', ''on'') }}'
     unique_id: mktwdbernartice_stav_rnn1
     attributes:
       Node: MKTWDBERNARTICE
@@ -45,7 +165,7 @@ template:
       id: '62'
       symbol: Stav
   - name: MKTWDBERNARTICE Stav RNN2
-    state: '{{ is_state(''binary_sensor.mktwdbernartice_stav_rnn2'', ''on'') }}'
+    state: '{{ is_state(''binary_sensor.mktwdbernartice_stav_rnn2_raw'', ''on'') }}'
     unique_id: mktwdbernartice_stav_rnn2
     attributes:
       Node: MKTWDBERNARTICE
@@ -60,7 +180,7 @@ template:
       id: '62'
       symbol: Stav
   - name: MKTWDBERNARTICE Stav RNN2
-    state: '{{ is_state(''binary_sensor.mktwdbernartice_stav_rnn2'', ''on'') }}'
+    state: '{{ is_state(''binary_sensor.mktwdbernartice_stav_rnn2_raw'', ''on'') }}'
     unique_id: mktwdbernartice_stav_rnn2
     attributes:
       Node: MKTWDBERNARTICE
@@ -75,7 +195,7 @@ template:
       id: '62'
       symbol: Stav
   - name: MKTWDBERNARTICE Stav RNN3
-    state: '{{ is_state(''binary_sensor.mktwdbernartice_stav_rnn3'', ''on'') }}'
+    state: '{{ is_state(''binary_sensor.mktwdbernartice_stav_rnn3_raw'', ''on'') }}'
     unique_id: mktwdbernartice_stav_rnn3
     attributes:
       Node: MKTWDBERNARTICE
@@ -90,7 +210,7 @@ template:
       id: '62'
       symbol: Stav
   - name: MKTWDBERNARTICE Data OK
-    state: '{{ is_state(''binary_sensor.mktwdbernartice_data_ok'', ''on'') }}'
+    state: '{{ is_state(''binary_sensor.mktwdbernartice_data_ok_raw'', ''on'') }}'
     unique_id: mktwdbernartice_data_ok
     attributes:
       Node: MKTWDBERNARTICE

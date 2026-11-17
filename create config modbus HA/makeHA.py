@@ -2,27 +2,30 @@ import pandas as pd
 import yaml
 import json
 import MyPkg.MujSoubor as MujSoubor
+import re
 
 def uniqueName(strName):
     # replace all strange 
+    strName = strName.strip(".")
     strName = strName.replace(" ","_")
     strName = strName.replace("-","_")
     strName = strName.replace("+","_")
     strName = strName.replace(";","_")
     strName = strName.replace(".","_")
     strName = strName.strip("_")
-    strName = strName
+    strName = re.sub(r'([ _])\1+', r'\1', strName)
     return strName.lower()
 
 def Name(strName):
     # replace all strange 
+    strName = strName.strip(".")
     strName = strName.replace("_"," ")
     strName = strName.replace("-"," ")
     strName = strName.replace("+"," ")
     strName = strName.replace(";"," ")
     strName = strName.replace("."," ")
     strName = strName.strip(" ")
-    strName = strName
+    strName = re.sub(r'([  ])\1+', r'\1', strName)
     return strName
 
 def modbusName(strName):
@@ -33,6 +36,7 @@ def modbusName(strName):
     strName = strName.replace(";"," ")
     strName = strName.replace("."," ")
     strName = strName.strip(" ")
+    strName = re.sub(r'([  ])\1+', r'\1', strName)
     return strName
 
 def modbusUniqueName(strName):
@@ -43,18 +47,27 @@ def modbusUniqueName(strName):
     strName = strName.replace(";","_")
     strName = strName.replace(".","_")
     strName = strName.strip("_")
-    strName = strName
+    strName = re.sub(r'([ _])\1+', r'\1', strName)
     return strName.lower()
 
 
 xx = MujSoubor.Soubor()
 
 configDir = "\\nodesConfig\\*.xlsx"
-
 Files = xx.ListFiles(configDir,True)
 
-yamlFile = ""
-
+actualSettingsDir = "\\actualSettings\\*.yaml"
+yamlFiles = xx.ListFiles(actualSettingsDir, True)
+modbusYaml = None
+for yamlFile in yamlFiles:
+    if "modbus.yaml" in yamlFile.lower():
+        with open(yamlFile, "r", encoding="utf-8") as file:
+            modbusYamlActual = yaml.safe_load(file)
+    if "template" in yamlFile.lower():
+        with open(yamlFile, "r", encoding="utf-8") as file:
+            templateYamlActual = yaml.safe_load(file)
+        
+        
 # === BUILD FINAL YAML ===
 modbus_config = []
 grid = {}
@@ -113,6 +126,9 @@ for File in Files:
 
         if ip == "XXX" or pd.isna(ip):
             continue
+        
+
+
 
         if node not in devices:
             devices[node] = {
@@ -140,10 +156,10 @@ for File in Files:
             Address = int(str(row["Address"])[1:])-1
             row["Address"] = Address
             binary_sensors = {
-            "name": Name(f"{node}_{row['qname']}"),
+            "name": Name(f"{node}_{row['qname']} raw"),
             "address": Address,
             "input_type": "coil",
-            "unique_id": uniqueName(f"{node}_{row['qname']}")
+            "unique_id": uniqueName(f"{node}_{row['qname']}_raw")
             }
             if "binary_sensor" not in devices[node]:
                 devices[node]["binary_sensor"] = []
@@ -161,7 +177,7 @@ for File in Files:
             })       
             
         # create template variables
-            State = f"is_state('binary_sensor.{uniqueName(f"{node}_{row['qname']}")}', 'on')"
+            State = f"is_state('binary_sensor.{uniqueName(f"{node}_{row['qname']}_raw")}', 'on')"
             attributes = {}
             attributes = {k: str(v) for k, v in row.items() 
                             if pd.notna(v) and not str(v).startswith(" ")}
@@ -181,14 +197,14 @@ for File in Files:
                     Scale = 1 / row["Scale"]
                     
             sensor = {
-                "name": Name(f"{node}_{row['qname']}"),
+                "name": Name(f"{node}_{row['qname']} raw"),
                 "address": int(str(row["Address"])[1:])-1,
                 "input_type": "holding",
                 "data_type": fmt["data_type"],
                 "scale": Scale,
                 "precision": 2,
                 "device_class":  "area",
-                "unique_id": uniqueName(f"{node}_{row['qname']}"),
+                "unique_id": uniqueName(f"{node}_{row['qname']}_raw"),
                 "unit_of_measurement": row['defaultJednotky']
             }
 
@@ -201,7 +217,7 @@ for File in Files:
         #panel view creation
             grid[node]["cards"].append({
                         "type": "tile",
-                        "entity": f"sensor.{uniqueName(f"{node}_{row['qname']}").lower()}",
+                        "entity": f"sensor.{uniqueName(f"{node}_{row['qname']} raw").lower()}",
                         "features_position": "bottom",
                         "vertical": 0,
                         "grid_options":{"columns": "full"}
@@ -219,7 +235,7 @@ for File in Files:
             
             template["sensor"].append({
                 "name": modbusName(f"{node}_{row['qname']}"),
-                "state": f"{{{{ states('sensor.{uniqueName(f"{node}_{row['qname']}")}') }}}}",
+                "state": f"{{{{ states('sensor.{uniqueName(f"{node}_{row['qname']} raw")}') }}}}",
                 "unit_of_measurement": row['defaultJednotky'],
                 "unique_id": modbusUniqueName(f"{node}_{row['qname']}"),
                 "attributes": attributes
@@ -228,6 +244,12 @@ for File in Files:
 
 
     for node, cfg in devices.items():
+        # # node actual je připraven pro porovnání s modbusYamlActual není dokončeno.
+        # nodeActual = next(
+        #     (item for item in modbusYamlActual if item.get('name') == node),
+        #     None
+        # )
+                                
         modbus_config.append({
             "name": node,
             **cfg

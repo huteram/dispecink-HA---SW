@@ -1,6 +1,2709 @@
 template:
-- - name: MKTWDBERNARTICE EP vyr
-    state: '{{ states(''sensor.mktwdbernartice_ep_vyr'') }}'
+- - name: FVEDEMO Osvit
+    state: '{{ states(''sensor.fvedemo_osvit_raw'') }}'
+    unit_of_measurement: W/m<sup>2</sup>
+    unique_id: fvedemo_osvit
+    attributes:
+      Node: FVEDEMO
+      qname: Osvit
+      Address: '504'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.50.106
+      Ide: '1'
+      q_name_cs: Osvit
+      defaultJednotky: W/m<sup>2</sup>
+      id: '11'
+      symbol: W/m<sup>2</sup>
+      name_cs: watt/metr<sup>2</sup>
+  - name: FVEDEMO Tep out
+    state: '{{ states(''sensor.fvedemo_tep_out_raw'') }}'
+    unit_of_measurement: °C
+    unique_id: fvedemo_tep_out
+    attributes:
+      Node: FVEDEMO
+      qname: Tep out.
+      Address: '498'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.50.106
+      Ide: '1'
+      q_name_cs: Teplota venkovní
+      defaultJednotky: °C
+      id: '18'
+      symbol: °C
+      name_cs: Stupeň celsia
+  - name: FVEDEMO U L1 L2
+    state: '{{ states(''sensor.fvedemo_u_l1_l2_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvedemo_u_l1_l2
+    attributes:
+      Node: FVEDEMO
+      qname: U L1-L2
+      Address: '625'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.50.106
+      Ide: '1'
+      q_name_cs: Napětí sdružené L1-L2
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEDEMO P Celk
+    state: '{{ states(''sensor.fvedemo_p_celk_raw'') }}'
+    unit_of_measurement: kW
+    unique_id: fvedemo_p_celk
+    attributes:
+      Node: FVEDEMO
+      qname: P Celk.
+      Address: '648'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.50.106
+      Ide: '1'
+      q_name_cs: Činný výkon okamžitý
+      defaultJednotky: kW
+      id: '21'
+      symbol: kW
+      name_cs: Kilowatty
+  - name: FVEDEMO U L2 L3
+    state: '{{ states(''sensor.fvedemo_u_l2_l3_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvedemo_u_l2_l3
+    attributes:
+      Node: FVEDEMO
+      qname: U L2-L3
+      Address: '626'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.50.106
+      Ide: '1'
+      q_name_cs: Napětí sdružené L2-L3
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEDEMO U L3 L1
+    state: '{{ states(''sensor.fvedemo_u_l3_l1_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvedemo_u_l3_l1
+    attributes:
+      Node: FVEDEMO
+      qname: U L3-L1
+      Address: '627'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.50.106
+      Ide: '1'
+      q_name_cs: Napětí sdružené L3-L1
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEDEMO P L2
+    state: '{{ states(''sensor.fvedemo_p_l2_raw'') }}'
+    unit_of_measurement: kW
+    unique_id: fvedemo_p_l2
+    attributes:
+      Node: FVEDEMO
+      qname: P L2
+      Address: '646'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.50.106
+      Ide: '1'
+      q_name_cs: Činný výkon L2
+      defaultJednotky: kW
+      id: '21'
+      symbol: kW
+      name_cs: Kilowatty
+  - name: FVEDEMO P L1
+    state: '{{ states(''sensor.fvedemo_p_l1_raw'') }}'
+    unit_of_measurement: kW
+    unique_id: fvedemo_p_l1
+    attributes:
+      Node: FVEDEMO
+      qname: P L1
+      Address: '645'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.50.106
+      Ide: '1'
+      q_name_cs: Činný výkon L1
+      defaultJednotky: kW
+      id: '21'
+      symbol: kW
+      name_cs: Kilowatty
+  - name: FVEDEMO P L3
+    state: '{{ states(''sensor.fvedemo_p_l3_raw'') }}'
+    unit_of_measurement: kW
+    unique_id: fvedemo_p_l3
+    attributes:
+      Node: FVEDEMO
+      qname: P L3
+      Address: '647'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.50.106
+      Ide: '1'
+      q_name_cs: Činný výkon L3
+      defaultJednotky: kW
+      id: '21'
+      symbol: kW
+      name_cs: Kilowatty
+  - name: FVEDEMO I L1
+    state: '{{ states(''sensor.fvedemo_i_l1_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvedemo_i_l1
+    attributes:
+      Node: FVEDEMO
+      qname: I L1
+      Address: '605'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.50.106
+      Ide: '1'
+      q_name_cs: Proud fází L1
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEDEMO I L2
+    state: '{{ states(''sensor.fvedemo_i_l2_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvedemo_i_l2
+    attributes:
+      Node: FVEDEMO
+      qname: I L2
+      Address: '606'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.50.106
+      Ide: '1'
+      q_name_cs: Proud fází L2
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEDEMO I L3
+    state: '{{ states(''sensor.fvedemo_i_l3_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvedemo_i_l3
+    attributes:
+      Node: FVEDEMO
+      qname: I L3
+      Address: '607'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.50.106
+      Ide: '1'
+      q_name_cs: Proud fází L3
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEDEMO I Unbal
+    state: '{{ states(''sensor.fvedemo_i_unbal_raw'') }}'
+    unit_of_measurement: '%'
+    unique_id: fvedemo_i_unbal
+    attributes:
+      Node: FVEDEMO
+      qname: I Unbal.
+      Address: '615'
+      Format: SINT16
+      Scale: '10'
+      IP: 192.168.50.106
+      Ide: '1'
+      q_name_cs: Proudová nesymetrie
+      defaultJednotky: '%'
+      id: '12'
+      symbol: '%'
+      name_cs: Procenta
+  - name: FVEDEMO U L1
+    state: '{{ states(''sensor.fvedemo_u_l1_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvedemo_u_l1
+    attributes:
+      Node: FVEDEMO
+      qname: U L1
+      Address: '629'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.50.106
+      Ide: '1'
+      q_name_cs: Napětí fázové L1
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEDEMO U L2
+    state: '{{ states(''sensor.fvedemo_u_l2_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvedemo_u_l2
+    attributes:
+      Node: FVEDEMO
+      qname: U L2
+      Address: '630'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.50.106
+      Ide: '1'
+      q_name_cs: Napětí fázové L2
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEDEMO U L3
+    state: '{{ states(''sensor.fvedemo_u_l3_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvedemo_u_l3
+    attributes:
+      Node: FVEDEMO
+      qname: U L3
+      Address: '631'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.50.106
+      Ide: '1'
+      q_name_cs: Napětí fázové L3
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEDEMO U Unbal
+    state: '{{ states(''sensor.fvedemo_u_unbal_raw'') }}'
+    unit_of_measurement: '%'
+    unique_id: fvedemo_u_unbal
+    attributes:
+      Node: FVEDEMO
+      qname: U Unbal.
+      Address: '641'
+      Format: SINT16
+      Scale: '10'
+      IP: 192.168.50.106
+      Ide: '1'
+      q_name_cs: Napěťová nesymetrie
+      defaultJednotky: '%'
+      id: '12'
+      symbol: '%'
+      name_cs: Procenta
+  - name: FVEDEMO U U Unbal
+    state: '{{ states(''sensor.fvedemo_u_u_unbal_raw'') }}'
+    unit_of_measurement: '%'
+    unique_id: fvedemo_u_u_unbal
+    attributes:
+      Node: FVEDEMO
+      qname: U-U Unbal.
+      Address: '637'
+      Format: SINT16
+      Scale: '10'
+      IP: 192.168.50.106
+      Ide: '1'
+      q_name_cs: Napěťová nesymetrie sdružená
+      defaultJednotky: '%'
+      id: '12'
+      symbol: '%'
+      name_cs: Procenta
+  - name: FVEDEMO Q L1
+    state: '{{ states(''sensor.fvedemo_q_l1_raw'') }}'
+    unit_of_measurement: kVAr
+    unique_id: fvedemo_q_l1
+    attributes:
+      Node: FVEDEMO
+      qname: Q L1
+      Address: '649'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.50.106
+      Ide: '1'
+      q_name_cs: Jalový výkon L1
+      defaultJednotky: kVAr
+      id: '23'
+      symbol: kVAr
+      name_cs: Kilovolampér reaktanční
+  - name: FVEDEMO Q L2
+    state: '{{ states(''sensor.fvedemo_q_l2_raw'') }}'
+    unit_of_measurement: kVAr
+    unique_id: fvedemo_q_l2
+    attributes:
+      Node: FVEDEMO
+      qname: Q L2
+      Address: '650'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.50.106
+      Ide: '1'
+      q_name_cs: Jalový výkon L2
+      defaultJednotky: kVAr
+      id: '23'
+      symbol: kVAr
+      name_cs: Kilovolampér reaktanční
+  - name: FVEDEMO Q L3
+    state: '{{ states(''sensor.fvedemo_q_l3_raw'') }}'
+    unit_of_measurement: kVAr
+    unique_id: fvedemo_q_l3
+    attributes:
+      Node: FVEDEMO
+      qname: Q L3
+      Address: '651'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.50.106
+      Ide: '1'
+      q_name_cs: Jalový výkon L3
+      defaultJednotky: kVAr
+      id: '23'
+      symbol: kVAr
+      name_cs: Kilovolampér reaktanční
+  - name: FVEDEMO Q Celk
+    state: '{{ states(''sensor.fvedemo_q_celk_raw'') }}'
+    unit_of_measurement: kVAr
+    unique_id: fvedemo_q_celk
+    attributes:
+      Node: FVEDEMO
+      qname: Q Celk.
+      Address: '652'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.50.106
+      Ide: '1'
+      q_name_cs: Jalový výkon okamžitý
+      defaultJednotky: kVAr
+      id: '23'
+      symbol: kVAr
+      name_cs: Kilovolampér reaktanční
+  - name: FVEDEMO cos FI
+    state: '{{ states(''sensor.fvedemo_cos_fi_raw'') }}'
+    unit_of_measurement: 1
+    unique_id: fvedemo_cos_fi
+    attributes:
+      Node: FVEDEMO
+      qname: cos FI
+      Address: '668'
+      Format: SINT16
+      Scale: '1000'
+      IP: 192.168.50.106
+      Ide: '1'
+      q_name_cs: Účinník
+      defaultJednotky: '1'
+      id: '1'
+      symbol: '1'
+      name_cs: bezrozměrná
+  - name: FVEDEMO Frekvence
+    state: '{{ states(''sensor.fvedemo_frekvence_raw'') }}'
+    unit_of_measurement: Hz
+    unique_id: fvedemo_frekvence
+    attributes:
+      Node: FVEDEMO
+      qname: Frekvence
+      Address: '685'
+      Format: SINT16
+      Scale: '100'
+      IP: 192.168.50.106
+      Ide: '1'
+      q_name_cs: Frekvence
+      defaultJednotky: Hz
+      id: '9'
+      symbol: Hz
+      name_cs: Hertz
+  - name: FVEDEMO EP vyr
+    state: '{{ states(''sensor.fvedemo_ep_vyr_raw'') }}'
+    unit_of_measurement: kWh
+    unique_id: fvedemo_ep_vyr
+    attributes:
+      Node: FVEDEMO
+      qname: EP vyr.
+      Address: '700'
+      Format: S32-M10k-2143
+      Scale: '1'
+      IP: 192.168.50.106
+      Ide: '1'
+      q_name_cs: Činná energie vyrobená
+      defaultJednotky: kWh
+      id: '28'
+      symbol: kWh
+      name_cs: Kilowatt-Hodin
+  - name: FVEKOTHEN1 I L1
+    state: '{{ states(''sensor.fvekothen1_i_l1_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvekothen1_i_l1
+    attributes:
+      Node: FVEKOTHEN1
+      qname: I L1
+      Address: '507'
+      Format: UINT16
+      Scale: '10'
+      IP: 192.168.72.10
+      Ide: '201'
+      q_name_cs: Proud fází L1
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEKOTHEN1 I L2
+    state: '{{ states(''sensor.fvekothen1_i_l2_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvekothen1_i_l2
+    attributes:
+      Node: FVEKOTHEN1
+      qname: I L2
+      Address: '508'
+      Format: UINT16
+      Scale: '10'
+      IP: 192.168.72.10
+      Ide: '201'
+      q_name_cs: Proud fází L2
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEKOTHEN1 I L3
+    state: '{{ states(''sensor.fvekothen1_i_l3_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvekothen1_i_l3
+    attributes:
+      Node: FVEKOTHEN1
+      qname: I L3
+      Address: '509'
+      Format: UINT16
+      Scale: '10'
+      IP: 192.168.72.10
+      Ide: '201'
+      q_name_cs: Proud fází L3
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEKOTHEN1 U L1 L2
+    state: '{{ states(''sensor.fvekothen1_u_l1_l2_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen1_u_l1_l2
+    attributes:
+      Node: FVEKOTHEN1
+      qname: U L1-L2
+      Address: '511'
+      Format: UINT16
+      Scale: '10'
+      IP: 192.168.72.10
+      Ide: '201'
+      q_name_cs: Napětí sdružené L1-L2
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN1 U L2 L3
+    state: '{{ states(''sensor.fvekothen1_u_l2_l3_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen1_u_l2_l3
+    attributes:
+      Node: FVEKOTHEN1
+      qname: U L2-L3
+      Address: '512'
+      Format: UINT16
+      Scale: '10'
+      IP: 192.168.72.10
+      Ide: '201'
+      q_name_cs: Napětí sdružené L2-L3
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN1 U L3 L1
+    state: '{{ states(''sensor.fvekothen1_u_l3_l1_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen1_u_l3_l1
+    attributes:
+      Node: FVEKOTHEN1
+      qname: U L3-L1
+      Address: '513'
+      Format: UINT16
+      Scale: '10'
+      IP: 192.168.72.10
+      Ide: '201'
+      q_name_cs: Napětí sdružené L3-L1
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN1 U L1
+    state: '{{ states(''sensor.fvekothen1_u_l1_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen1_u_l1
+    attributes:
+      Node: FVEKOTHEN1
+      qname: U L1
+      Address: '514'
+      Format: UINT16
+      Scale: '10'
+      IP: 192.168.72.10
+      Ide: '201'
+      q_name_cs: Napětí fázové L1
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN1 U L2
+    state: '{{ states(''sensor.fvekothen1_u_l2_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen1_u_l2
+    attributes:
+      Node: FVEKOTHEN1
+      qname: U L2
+      Address: '515'
+      Format: UINT16
+      Scale: '10'
+      IP: 192.168.72.10
+      Ide: '201'
+      q_name_cs: Napětí fázové L2
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN1 U L3
+    state: '{{ states(''sensor.fvekothen1_u_l3_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen1_u_l3
+    attributes:
+      Node: FVEKOTHEN1
+      qname: U L3
+      Address: '516'
+      Format: UINT16
+      Scale: '10'
+      IP: 192.168.72.10
+      Ide: '201'
+      q_name_cs: Napětí fázové L3
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN1 Frekvence
+    state: '{{ states(''sensor.fvekothen1_frekvence_raw'') }}'
+    unit_of_measurement: Hz
+    unique_id: fvekothen1_frekvence
+    attributes:
+      Node: FVEKOTHEN1
+      qname: Frekvence
+      Address: '517'
+      Format: UINT16
+      Scale: '100'
+      IP: 192.168.72.10
+      Ide: '201'
+      q_name_cs: Frekvence
+      defaultJednotky: Hz
+      id: '9'
+      symbol: Hz
+      name_cs: Hertz
+  - name: FVEKOTHEN1 P Celk
+    state: '{{ states(''sensor.fvekothen1_p_celk_raw'') }}'
+    unit_of_measurement: kW
+    unique_id: fvekothen1_p_celk
+    attributes:
+      Node: FVEKOTHEN1
+      qname: P Celk.
+      Address: '518'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.10
+      Ide: '201'
+      q_name_cs: Činný výkon okamžitý
+      defaultJednotky: kW
+      id: '21'
+      symbol: kW
+      name_cs: Kilowatty
+  - name: FVEKOTHEN1 Q Celk
+    state: '{{ states(''sensor.fvekothen1_q_celk_raw'') }}'
+    unit_of_measurement: kVAr
+    unique_id: fvekothen1_q_celk
+    attributes:
+      Node: FVEKOTHEN1
+      qname: Q Celk.
+      Address: '519'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.10
+      Ide: '201'
+      q_name_cs: Jalový výkon okamžitý
+      defaultJednotky: kVAr
+      id: '23'
+      symbol: kVAr
+      name_cs: Kilovolampér reaktanční
+  - name: FVEKOTHEN1 S Celk
+    state: '{{ states(''sensor.fvekothen1_s_celk_raw'') }}'
+    unit_of_measurement: kVA
+    unique_id: fvekothen1_s_celk
+    attributes:
+      Node: FVEKOTHEN1
+      qname: S Celk.
+      Address: '520'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.10
+      Ide: '201'
+      q_name_cs: Zdánlivý výkon okamžitý
+      defaultJednotky: kVA
+      id: '22'
+      symbol: kVA
+      name_cs: Kilovoltampéry
+  - name: FVEKOTHEN1 cos FI
+    state: '{{ states(''sensor.fvekothen1_cos_fi_raw'') }}'
+    unit_of_measurement: 1
+    unique_id: fvekothen1_cos_fi
+    attributes:
+      Node: FVEKOTHEN1
+      qname: cos FI
+      Address: '521'
+      Format: SwappedFloat
+      Scale: '10'
+      IP: 192.168.72.10
+      Ide: '201'
+      q_name_cs: Účinník
+      defaultJednotky: '1'
+      id: '1'
+      symbol: '1'
+      name_cs: bezrozměrná
+  - name: FVEKOTHEN1 Osvit
+    state: '{{ states(''sensor.fvekothen1_osvit_raw'') }}'
+    unit_of_measurement: W/m<sup>2</sup>
+    unique_id: fvekothen1_osvit
+    attributes:
+      Node: FVEKOTHEN1
+      qname: Osvit
+      Address: '722'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.72.10
+      Ide: '201'
+      q_name_cs: Osvit
+      defaultJednotky: W/m<sup>2</sup>
+      id: '11'
+      symbol: W/m<sup>2</sup>
+      name_cs: watt/metr<sup>2</sup>
+  - name: FVEKOTHEN110KV EP vyr
+    state: '{{ states(''sensor.fvekothen110kv_ep_vyr_raw'') }}'
+    unit_of_measurement: kWh
+    unique_id: fvekothen110kv_ep_vyr
+    attributes:
+      Node: FVEKOTHEN110KV
+      qname: EP vyr.
+      Address: '18'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.75.10
+      Ide: '206'
+      q_name_cs: Činná energie vyrobená
+      defaultJednotky: kWh
+      id: '28'
+      symbol: kWh
+      name_cs: Kilowatt-Hodin
+  - name: FVEKOTHEN110KV EP spotr
+    state: '{{ states(''sensor.fvekothen110kv_ep_spotr_raw'') }}'
+    unit_of_measurement: kWh
+    unique_id: fvekothen110kv_ep_spotr
+    attributes:
+      Node: FVEKOTHEN110KV
+      qname: EP spotr.
+      Address: '22'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.75.10
+      Ide: '206'
+      q_name_cs: Činná energie spotřebovaná
+      defaultJednotky: kWh
+      id: '28'
+      symbol: kWh
+      name_cs: Kilowatt-Hodin
+  - name: FVEKOTHEN110KV EQ spotr
+    state: '{{ states(''sensor.fvekothen110kv_eq_spotr_raw'') }}'
+    unit_of_measurement: kVARh
+    unique_id: fvekothen110kv_eq_spotr
+    attributes:
+      Node: FVEKOTHEN110KV
+      qname: EQ spotr.
+      Address: '36'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.75.10
+      Ide: '206'
+      q_name_cs: Jalová energie spotřebovaná [elektroměr]
+      defaultJednotky: kVARh
+      id: '44'
+      symbol: kVARh
+      name_cs: Kilovoltampér-reaktančních-Hodin
+  - name: FVEKOTHEN110KV EQ vyr
+    state: '{{ states(''sensor.fvekothen110kv_eq_vyr_raw'') }}'
+    unit_of_measurement: kVARh
+    unique_id: fvekothen110kv_eq_vyr
+    attributes:
+      Node: FVEKOTHEN110KV
+      qname: EQ vyr.
+      Address: '46'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.75.10
+      Ide: '206'
+      q_name_cs: Jalová energie vyrobená [elektroměr]
+      defaultJednotky: kVARh
+      id: '44'
+      symbol: kVARh
+      name_cs: Kilovoltampér-reaktančních-Hodin
+  - name: FVEKOTHEN110KV cos FI
+    state: '{{ states(''sensor.fvekothen110kv_cos_fi_raw'') }}'
+    unit_of_measurement: 1
+    unique_id: fvekothen110kv_cos_fi
+    attributes:
+      Node: FVEKOTHEN110KV
+      qname: cos FI
+      Address: '50'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.75.10
+      Ide: '206'
+      q_name_cs: Účinník
+      defaultJednotky: '1'
+      id: '1'
+      symbol: '1'
+      name_cs: bezrozměrná
+  - name: FVEKOTHEN110KV Frekvence
+    state: '{{ states(''sensor.fvekothen110kv_frekvence_raw'') }}'
+    unit_of_measurement: Hz
+    unique_id: fvekothen110kv_frekvence
+    attributes:
+      Node: FVEKOTHEN110KV
+      qname: Frekvence
+      Address: '87'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.75.10
+      Ide: '206'
+      q_name_cs: Frekvence
+      defaultJednotky: Hz
+      id: '9'
+      symbol: Hz
+      name_cs: Hertz
+  - name: FVEKOTHEN110KV I L1
+    state: '{{ states(''sensor.fvekothen110kv_i_l1_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvekothen110kv_i_l1
+    attributes:
+      Node: FVEKOTHEN110KV
+      qname: I L1
+      Address: '507'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.75.10
+      Ide: '206'
+      q_name_cs: Proud fází L1
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEKOTHEN110KV I L2
+    state: '{{ states(''sensor.fvekothen110kv_i_l2_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvekothen110kv_i_l2
+    attributes:
+      Node: FVEKOTHEN110KV
+      qname: I L2
+      Address: '508'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.75.10
+      Ide: '206'
+      q_name_cs: Proud fází L2
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEKOTHEN110KV I L3
+    state: '{{ states(''sensor.fvekothen110kv_i_l3_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvekothen110kv_i_l3
+    attributes:
+      Node: FVEKOTHEN110KV
+      qname: I L3
+      Address: '509'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.75.10
+      Ide: '206'
+      q_name_cs: Proud fází L3
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEKOTHEN110KV I Unbal
+    state: '{{ states(''sensor.fvekothen110kv_i_unbal_raw'') }}'
+    unit_of_measurement: '%'
+    unique_id: fvekothen110kv_i_unbal
+    attributes:
+      Node: FVEKOTHEN110KV
+      qname: I Unbal.
+      Address: '516'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.75.10
+      Ide: '206'
+      q_name_cs: Proudová nesymetrie
+      defaultJednotky: '%'
+      id: '12'
+      symbol: '%'
+      name_cs: Procenta
+  - name: FVEKOTHEN110KV U L1 L2
+    state: '{{ states(''sensor.fvekothen110kv_u_l1_l2_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen110kv_u_l1_l2
+    attributes:
+      Node: FVEKOTHEN110KV
+      qname: U L1-L2
+      Address: '527'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.75.10
+      Ide: '206'
+      q_name_cs: Napětí sdružené L1-L2
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN110KV U L2 L3
+    state: '{{ states(''sensor.fvekothen110kv_u_l2_l3_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen110kv_u_l2_l3
+    attributes:
+      Node: FVEKOTHEN110KV
+      qname: U L2-L3
+      Address: '528'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.75.10
+      Ide: '206'
+      q_name_cs: Napětí sdružené L2-L3
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN110KV U L3 L1
+    state: '{{ states(''sensor.fvekothen110kv_u_l3_l1_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen110kv_u_l3_l1
+    attributes:
+      Node: FVEKOTHEN110KV
+      qname: U L3-L1
+      Address: '529'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.75.10
+      Ide: '206'
+      q_name_cs: Napětí sdružené L3-L1
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN110KV U L1
+    state: '{{ states(''sensor.fvekothen110kv_u_l1_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen110kv_u_l1
+    attributes:
+      Node: FVEKOTHEN110KV
+      qname: U L1
+      Address: '531'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.75.10
+      Ide: '206'
+      q_name_cs: Napětí fázové L1
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN110KV U L2
+    state: '{{ states(''sensor.fvekothen110kv_u_l2_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen110kv_u_l2
+    attributes:
+      Node: FVEKOTHEN110KV
+      qname: U L2
+      Address: '532'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.75.10
+      Ide: '206'
+      q_name_cs: Napětí fázové L2
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN110KV U L3
+    state: '{{ states(''sensor.fvekothen110kv_u_l3_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen110kv_u_l3
+    attributes:
+      Node: FVEKOTHEN110KV
+      qname: U L3
+      Address: '533'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.75.10
+      Ide: '206'
+      q_name_cs: Napětí fázové L3
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN110KV U Unbal
+    state: '{{ states(''sensor.fvekothen110kv_u_unbal_raw'') }}'
+    unit_of_measurement: '%'
+    unique_id: fvekothen110kv_u_unbal
+    attributes:
+      Node: FVEKOTHEN110KV
+      qname: U Unbal.
+      Address: '543'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.75.10
+      Ide: '206'
+      q_name_cs: Napěťová nesymetrie
+      defaultJednotky: '%'
+      id: '12'
+      symbol: '%'
+      name_cs: Procenta
+  - name: FVEKOTHEN110KV P Celk
+    state: '{{ states(''sensor.fvekothen110kv_p_celk_raw'') }}'
+    unit_of_measurement: kW
+    unique_id: fvekothen110kv_p_celk
+    attributes:
+      Node: FVEKOTHEN110KV
+      qname: P Celk.
+      Address: '550'
+      Format: SINT16
+      Scale: '-1'
+      IP: 192.168.75.10
+      Ide: '206'
+      q_name_cs: Činný výkon okamžitý
+      defaultJednotky: kW
+      id: '21'
+      symbol: kW
+      name_cs: Kilowatty
+  - name: FVEKOTHEN110KV Q Celk
+    state: '{{ states(''sensor.fvekothen110kv_q_celk_raw'') }}'
+    unit_of_measurement: kVAr
+    unique_id: fvekothen110kv_q_celk
+    attributes:
+      Node: FVEKOTHEN110KV
+      qname: Q Celk.
+      Address: '554'
+      Format: SINT16
+      Scale: '-1'
+      IP: 192.168.75.10
+      Ide: '206'
+      q_name_cs: Jalový výkon okamžitý
+      defaultJednotky: kVAr
+      id: '23'
+      symbol: kVAr
+      name_cs: Kilovolampér reaktanční
+  - name: FVEKOTHEN110KV S Celk
+    state: '{{ states(''sensor.fvekothen110kv_s_celk_raw'') }}'
+    unit_of_measurement: kVA
+    unique_id: fvekothen110kv_s_celk
+    attributes:
+      Node: FVEKOTHEN110KV
+      qname: S Celk.
+      Address: '558'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.75.10
+      Ide: '206'
+      q_name_cs: Zdánlivý výkon okamžitý
+      defaultJednotky: kVA
+      id: '22'
+      symbol: kVA
+      name_cs: Kilovoltampéry
+  - name: FVEKOTHEN110KV Osvit
+    state: '{{ states(''sensor.fvekothen110kv_osvit_raw'') }}'
+    unit_of_measurement: W/m<sup>2</sup>
+    unique_id: fvekothen110kv_osvit
+    attributes:
+      Node: FVEKOTHEN110KV
+      qname: Osvit
+      Address: '722'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.75.10
+      Ide: '206'
+      q_name_cs: Osvit
+      defaultJednotky: W/m<sup>2</sup>
+      id: '11'
+      symbol: W/m<sup>2</sup>
+      name_cs: watt/metr<sup>2</sup>
+  - name: FVEKOTHEN2 cos FI
+    state: '{{ states(''sensor.fvekothen2_cos_fi_raw'') }}'
+    unit_of_measurement: 1
+    unique_id: fvekothen2_cos_fi
+    attributes:
+      Node: FVEKOTHEN2
+      qname: cos FI
+      Address: '50'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.72.11
+      Ide: '202'
+      q_name_cs: Účinník
+      defaultJednotky: '1'
+      id: '1'
+      symbol: '1'
+      name_cs: bezrozměrná
+  - name: FVEKOTHEN2 I L1
+    state: '{{ states(''sensor.fvekothen2_i_l1_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvekothen2_i_l1
+    attributes:
+      Node: FVEKOTHEN2
+      qname: I L1
+      Address: '507'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.11
+      Ide: '202'
+      q_name_cs: Proud fází L1
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEKOTHEN2 I L2
+    state: '{{ states(''sensor.fvekothen2_i_l2_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvekothen2_i_l2
+    attributes:
+      Node: FVEKOTHEN2
+      qname: I L2
+      Address: '508'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.11
+      Ide: '202'
+      q_name_cs: Proud fází L2
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEKOTHEN2 I L3
+    state: '{{ states(''sensor.fvekothen2_i_l3_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvekothen2_i_l3
+    attributes:
+      Node: FVEKOTHEN2
+      qname: I L3
+      Address: '509'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.11
+      Ide: '202'
+      q_name_cs: Proud fází L3
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEKOTHEN2 I Unbal
+    state: '{{ states(''sensor.fvekothen2_i_unbal_raw'') }}'
+    unit_of_measurement: '%'
+    unique_id: fvekothen2_i_unbal
+    attributes:
+      Node: FVEKOTHEN2
+      qname: I Unbal.
+      Address: '516'
+      Format: UINT16
+      Scale: '10'
+      IP: 192.168.72.11
+      Ide: '202'
+      q_name_cs: Proudová nesymetrie
+      defaultJednotky: '%'
+      id: '12'
+      symbol: '%'
+      name_cs: Procenta
+  - name: FVEKOTHEN2 U L1 L2
+    state: '{{ states(''sensor.fvekothen2_u_l1_l2_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen2_u_l1_l2
+    attributes:
+      Node: FVEKOTHEN2
+      qname: U L1-L2
+      Address: '527'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.11
+      Ide: '202'
+      q_name_cs: Napětí sdružené L1-L2
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN2 U L2 L3
+    state: '{{ states(''sensor.fvekothen2_u_l2_l3_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen2_u_l2_l3
+    attributes:
+      Node: FVEKOTHEN2
+      qname: U L2-L3
+      Address: '528'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.11
+      Ide: '202'
+      q_name_cs: Napětí sdružené L2-L3
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN2 U L3 L1
+    state: '{{ states(''sensor.fvekothen2_u_l3_l1_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen2_u_l3_l1
+    attributes:
+      Node: FVEKOTHEN2
+      qname: U L3-L1
+      Address: '529'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.11
+      Ide: '202'
+      q_name_cs: Napětí sdružené L3-L1
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN2 U L1
+    state: '{{ states(''sensor.fvekothen2_u_l1_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen2_u_l1
+    attributes:
+      Node: FVEKOTHEN2
+      qname: U L1
+      Address: '531'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.11
+      Ide: '202'
+      q_name_cs: Napětí fázové L1
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN2 U L2
+    state: '{{ states(''sensor.fvekothen2_u_l2_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen2_u_l2
+    attributes:
+      Node: FVEKOTHEN2
+      qname: U L2
+      Address: '532'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.11
+      Ide: '202'
+      q_name_cs: Napětí fázové L2
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN2 U L3
+    state: '{{ states(''sensor.fvekothen2_u_l3_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen2_u_l3
+    attributes:
+      Node: FVEKOTHEN2
+      qname: U L3
+      Address: '533'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.11
+      Ide: '202'
+      q_name_cs: Napětí fázové L3
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN2 U Unbal
+    state: '{{ states(''sensor.fvekothen2_u_unbal_raw'') }}'
+    unit_of_measurement: '%'
+    unique_id: fvekothen2_u_unbal
+    attributes:
+      Node: FVEKOTHEN2
+      qname: U Unbal.
+      Address: '543'
+      Format: UINT16
+      Scale: '10'
+      IP: 192.168.72.11
+      Ide: '202'
+      q_name_cs: Napěťová nesymetrie
+      defaultJednotky: '%'
+      id: '12'
+      symbol: '%'
+      name_cs: Procenta
+  - name: FVEKOTHEN2 P Celk
+    state: '{{ states(''sensor.fvekothen2_p_celk_raw'') }}'
+    unit_of_measurement: kW
+    unique_id: fvekothen2_p_celk
+    attributes:
+      Node: FVEKOTHEN2
+      qname: P Celk.
+      Address: '550'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.72.11
+      Ide: '202'
+      q_name_cs: Činný výkon okamžitý
+      defaultJednotky: kW
+      id: '21'
+      symbol: kW
+      name_cs: Kilowatty
+  - name: FVEKOTHEN2 Q Celk
+    state: '{{ states(''sensor.fvekothen2_q_celk_raw'') }}'
+    unit_of_measurement: kVAr
+    unique_id: fvekothen2_q_celk
+    attributes:
+      Node: FVEKOTHEN2
+      qname: Q Celk.
+      Address: '554'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.72.11
+      Ide: '202'
+      q_name_cs: Jalový výkon okamžitý
+      defaultJednotky: kVAr
+      id: '23'
+      symbol: kVAr
+      name_cs: Kilovolampér reaktanční
+  - name: FVEKOTHEN2 S Celk
+    state: '{{ states(''sensor.fvekothen2_s_celk_raw'') }}'
+    unit_of_measurement: kVA
+    unique_id: fvekothen2_s_celk
+    attributes:
+      Node: FVEKOTHEN2
+      qname: S Celk.
+      Address: '558'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.72.11
+      Ide: '202'
+      q_name_cs: Zdánlivý výkon okamžitý
+      defaultJednotky: kVA
+      id: '22'
+      symbol: kVA
+      name_cs: Kilovoltampéry
+  - name: FVEKOTHEN3 cos FI
+    state: '{{ states(''sensor.fvekothen3_cos_fi_raw'') }}'
+    unit_of_measurement: 1
+    unique_id: fvekothen3_cos_fi
+    attributes:
+      Node: FVEKOTHEN3
+      qname: cos FI
+      Address: '50'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.72.12
+      Ide: '203'
+      q_name_cs: Účinník
+      defaultJednotky: '1'
+      id: '1'
+      symbol: '1'
+      name_cs: bezrozměrná
+  - name: FVEKOTHEN3 I L1
+    state: '{{ states(''sensor.fvekothen3_i_l1_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvekothen3_i_l1
+    attributes:
+      Node: FVEKOTHEN3
+      qname: I L1
+      Address: '507'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.12
+      Ide: '203'
+      q_name_cs: Proud fází L1
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEKOTHEN3 I L2
+    state: '{{ states(''sensor.fvekothen3_i_l2_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvekothen3_i_l2
+    attributes:
+      Node: FVEKOTHEN3
+      qname: I L2
+      Address: '508'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.12
+      Ide: '203'
+      q_name_cs: Proud fází L2
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEKOTHEN3 I L3
+    state: '{{ states(''sensor.fvekothen3_i_l3_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvekothen3_i_l3
+    attributes:
+      Node: FVEKOTHEN3
+      qname: I L3
+      Address: '509'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.12
+      Ide: '203'
+      q_name_cs: Proud fází L3
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEKOTHEN3 I Unbal
+    state: '{{ states(''sensor.fvekothen3_i_unbal_raw'') }}'
+    unit_of_measurement: '%'
+    unique_id: fvekothen3_i_unbal
+    attributes:
+      Node: FVEKOTHEN3
+      qname: I Unbal.
+      Address: '516'
+      Format: UINT16
+      Scale: '10'
+      IP: 192.168.72.12
+      Ide: '203'
+      q_name_cs: Proudová nesymetrie
+      defaultJednotky: '%'
+      id: '12'
+      symbol: '%'
+      name_cs: Procenta
+  - name: FVEKOTHEN3 U L1 L2
+    state: '{{ states(''sensor.fvekothen3_u_l1_l2_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen3_u_l1_l2
+    attributes:
+      Node: FVEKOTHEN3
+      qname: U L1-L2
+      Address: '527'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.12
+      Ide: '203'
+      q_name_cs: Napětí sdružené L1-L2
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN3 U L2 L3
+    state: '{{ states(''sensor.fvekothen3_u_l2_l3_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen3_u_l2_l3
+    attributes:
+      Node: FVEKOTHEN3
+      qname: U L2-L3
+      Address: '528'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.12
+      Ide: '203'
+      q_name_cs: Napětí sdružené L2-L3
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN3 U L3 L1
+    state: '{{ states(''sensor.fvekothen3_u_l3_l1_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen3_u_l3_l1
+    attributes:
+      Node: FVEKOTHEN3
+      qname: U L3-L1
+      Address: '529'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.12
+      Ide: '203'
+      q_name_cs: Napětí sdružené L3-L1
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN3 U L1
+    state: '{{ states(''sensor.fvekothen3_u_l1_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen3_u_l1
+    attributes:
+      Node: FVEKOTHEN3
+      qname: U L1
+      Address: '531'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.12
+      Ide: '203'
+      q_name_cs: Napětí fázové L1
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN3 U L2
+    state: '{{ states(''sensor.fvekothen3_u_l2_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen3_u_l2
+    attributes:
+      Node: FVEKOTHEN3
+      qname: U L2
+      Address: '532'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.12
+      Ide: '203'
+      q_name_cs: Napětí fázové L2
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN3 U L3
+    state: '{{ states(''sensor.fvekothen3_u_l3_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen3_u_l3
+    attributes:
+      Node: FVEKOTHEN3
+      qname: U L3
+      Address: '533'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.12
+      Ide: '203'
+      q_name_cs: Napětí fázové L3
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN3 U Unbal
+    state: '{{ states(''sensor.fvekothen3_u_unbal_raw'') }}'
+    unit_of_measurement: '%'
+    unique_id: fvekothen3_u_unbal
+    attributes:
+      Node: FVEKOTHEN3
+      qname: U Unbal.
+      Address: '543'
+      Format: UINT16
+      Scale: '10'
+      IP: 192.168.72.12
+      Ide: '203'
+      q_name_cs: Napěťová nesymetrie
+      defaultJednotky: '%'
+      id: '12'
+      symbol: '%'
+      name_cs: Procenta
+  - name: FVEKOTHEN3 P Celk
+    state: '{{ states(''sensor.fvekothen3_p_celk_raw'') }}'
+    unit_of_measurement: kW
+    unique_id: fvekothen3_p_celk
+    attributes:
+      Node: FVEKOTHEN3
+      qname: P Celk.
+      Address: '550'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.72.12
+      Ide: '203'
+      q_name_cs: Činný výkon okamžitý
+      defaultJednotky: kW
+      id: '21'
+      symbol: kW
+      name_cs: Kilowatty
+  - name: FVEKOTHEN3 Q Celk
+    state: '{{ states(''sensor.fvekothen3_q_celk_raw'') }}'
+    unit_of_measurement: kVAr
+    unique_id: fvekothen3_q_celk
+    attributes:
+      Node: FVEKOTHEN3
+      qname: Q Celk.
+      Address: '554'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.72.12
+      Ide: '203'
+      q_name_cs: Jalový výkon okamžitý
+      defaultJednotky: kVAr
+      id: '23'
+      symbol: kVAr
+      name_cs: Kilovolampér reaktanční
+  - name: FVEKOTHEN3 S Celk
+    state: '{{ states(''sensor.fvekothen3_s_celk_raw'') }}'
+    unit_of_measurement: kVA
+    unique_id: fvekothen3_s_celk
+    attributes:
+      Node: FVEKOTHEN3
+      qname: S Celk.
+      Address: '558'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.72.12
+      Ide: '203'
+      q_name_cs: Zdánlivý výkon okamžitý
+      defaultJednotky: kVA
+      id: '22'
+      symbol: kVA
+      name_cs: Kilovoltampéry
+  - name: FVEKOTHEN4 cos FI
+    state: '{{ states(''sensor.fvekothen4_cos_fi_raw'') }}'
+    unit_of_measurement: 1
+    unique_id: fvekothen4_cos_fi
+    attributes:
+      Node: FVEKOTHEN4
+      qname: cos FI
+      Address: '50'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.72.13
+      Ide: '204'
+      q_name_cs: Účinník
+      defaultJednotky: '1'
+      id: '1'
+      symbol: '1'
+      name_cs: bezrozměrná
+  - name: FVEKOTHEN4 I L1
+    state: '{{ states(''sensor.fvekothen4_i_l1_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvekothen4_i_l1
+    attributes:
+      Node: FVEKOTHEN4
+      qname: I L1
+      Address: '507'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.13
+      Ide: '204'
+      q_name_cs: Proud fází L1
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEKOTHEN4 I L2
+    state: '{{ states(''sensor.fvekothen4_i_l2_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvekothen4_i_l2
+    attributes:
+      Node: FVEKOTHEN4
+      qname: I L2
+      Address: '508'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.13
+      Ide: '204'
+      q_name_cs: Proud fází L2
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEKOTHEN4 I L3
+    state: '{{ states(''sensor.fvekothen4_i_l3_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvekothen4_i_l3
+    attributes:
+      Node: FVEKOTHEN4
+      qname: I L3
+      Address: '509'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.13
+      Ide: '204'
+      q_name_cs: Proud fází L3
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEKOTHEN4 I Unbal
+    state: '{{ states(''sensor.fvekothen4_i_unbal_raw'') }}'
+    unit_of_measurement: '%'
+    unique_id: fvekothen4_i_unbal
+    attributes:
+      Node: FVEKOTHEN4
+      qname: I Unbal.
+      Address: '516'
+      Format: UINT16
+      Scale: '10'
+      IP: 192.168.72.13
+      Ide: '204'
+      q_name_cs: Proudová nesymetrie
+      defaultJednotky: '%'
+      id: '12'
+      symbol: '%'
+      name_cs: Procenta
+  - name: FVEKOTHEN4 U L1 L2
+    state: '{{ states(''sensor.fvekothen4_u_l1_l2_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen4_u_l1_l2
+    attributes:
+      Node: FVEKOTHEN4
+      qname: U L1-L2
+      Address: '527'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.13
+      Ide: '204'
+      q_name_cs: Napětí sdružené L1-L2
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN4 U L2 L3
+    state: '{{ states(''sensor.fvekothen4_u_l2_l3_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen4_u_l2_l3
+    attributes:
+      Node: FVEKOTHEN4
+      qname: U L2-L3
+      Address: '528'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.13
+      Ide: '204'
+      q_name_cs: Napětí sdružené L2-L3
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN4 U L3 L1
+    state: '{{ states(''sensor.fvekothen4_u_l3_l1_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen4_u_l3_l1
+    attributes:
+      Node: FVEKOTHEN4
+      qname: U L3-L1
+      Address: '529'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.13
+      Ide: '204'
+      q_name_cs: Napětí sdružené L3-L1
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN4 U L1
+    state: '{{ states(''sensor.fvekothen4_u_l1_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen4_u_l1
+    attributes:
+      Node: FVEKOTHEN4
+      qname: U L1
+      Address: '531'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.13
+      Ide: '204'
+      q_name_cs: Napětí fázové L1
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN4 U L2
+    state: '{{ states(''sensor.fvekothen4_u_l2_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen4_u_l2
+    attributes:
+      Node: FVEKOTHEN4
+      qname: U L2
+      Address: '532'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.13
+      Ide: '204'
+      q_name_cs: Napětí fázové L2
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN4 U L3
+    state: '{{ states(''sensor.fvekothen4_u_l3_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen4_u_l3
+    attributes:
+      Node: FVEKOTHEN4
+      qname: U L3
+      Address: '533'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.13
+      Ide: '204'
+      q_name_cs: Napětí fázové L3
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN4 U Unbal
+    state: '{{ states(''sensor.fvekothen4_u_unbal_raw'') }}'
+    unit_of_measurement: '%'
+    unique_id: fvekothen4_u_unbal
+    attributes:
+      Node: FVEKOTHEN4
+      qname: U Unbal.
+      Address: '543'
+      Format: UINT16
+      Scale: '10'
+      IP: 192.168.72.13
+      Ide: '204'
+      q_name_cs: Napěťová nesymetrie
+      defaultJednotky: '%'
+      id: '12'
+      symbol: '%'
+      name_cs: Procenta
+  - name: FVEKOTHEN4 P Celk
+    state: '{{ states(''sensor.fvekothen4_p_celk_raw'') }}'
+    unit_of_measurement: kW
+    unique_id: fvekothen4_p_celk
+    attributes:
+      Node: FVEKOTHEN4
+      qname: P Celk.
+      Address: '550'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.72.13
+      Ide: '204'
+      q_name_cs: Činný výkon okamžitý
+      defaultJednotky: kW
+      id: '21'
+      symbol: kW
+      name_cs: Kilowatty
+  - name: FVEKOTHEN4 Q Celk
+    state: '{{ states(''sensor.fvekothen4_q_celk_raw'') }}'
+    unit_of_measurement: kVAr
+    unique_id: fvekothen4_q_celk
+    attributes:
+      Node: FVEKOTHEN4
+      qname: Q Celk.
+      Address: '554'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.72.13
+      Ide: '204'
+      q_name_cs: Jalový výkon okamžitý
+      defaultJednotky: kVAr
+      id: '23'
+      symbol: kVAr
+      name_cs: Kilovolampér reaktanční
+  - name: FVEKOTHEN4 S Celk
+    state: '{{ states(''sensor.fvekothen4_s_celk_raw'') }}'
+    unit_of_measurement: kVA
+    unique_id: fvekothen4_s_celk
+    attributes:
+      Node: FVEKOTHEN4
+      qname: S Celk.
+      Address: '558'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.72.13
+      Ide: '204'
+      q_name_cs: Zdánlivý výkon okamžitý
+      defaultJednotky: kVA
+      id: '22'
+      symbol: kVA
+      name_cs: Kilovoltampéry
+  - name: FVEKOTHEN5 cos FI
+    state: '{{ states(''sensor.fvekothen5_cos_fi_raw'') }}'
+    unit_of_measurement: 1
+    unique_id: fvekothen5_cos_fi
+    attributes:
+      Node: FVEKOTHEN5
+      qname: cos FI
+      Address: '50'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.72.14
+      Ide: '205'
+      q_name_cs: Účinník
+      defaultJednotky: '1'
+      id: '1'
+      symbol: '1'
+      name_cs: bezrozměrná
+  - name: FVEKOTHEN5 I L1
+    state: '{{ states(''sensor.fvekothen5_i_l1_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvekothen5_i_l1
+    attributes:
+      Node: FVEKOTHEN5
+      qname: I L1
+      Address: '507'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.14
+      Ide: '205'
+      q_name_cs: Proud fází L1
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEKOTHEN5 I L2
+    state: '{{ states(''sensor.fvekothen5_i_l2_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvekothen5_i_l2
+    attributes:
+      Node: FVEKOTHEN5
+      qname: I L2
+      Address: '508'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.14
+      Ide: '205'
+      q_name_cs: Proud fází L2
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEKOTHEN5 I L3
+    state: '{{ states(''sensor.fvekothen5_i_l3_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvekothen5_i_l3
+    attributes:
+      Node: FVEKOTHEN5
+      qname: I L3
+      Address: '509'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.14
+      Ide: '205'
+      q_name_cs: Proud fází L3
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEKOTHEN5 I Unbal
+    state: '{{ states(''sensor.fvekothen5_i_unbal_raw'') }}'
+    unit_of_measurement: '%'
+    unique_id: fvekothen5_i_unbal
+    attributes:
+      Node: FVEKOTHEN5
+      qname: I Unbal.
+      Address: '516'
+      Format: UINT16
+      Scale: '10'
+      IP: 192.168.72.14
+      Ide: '205'
+      q_name_cs: Proudová nesymetrie
+      defaultJednotky: '%'
+      id: '12'
+      symbol: '%'
+      name_cs: Procenta
+  - name: FVEKOTHEN5 U L1 L2
+    state: '{{ states(''sensor.fvekothen5_u_l1_l2_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen5_u_l1_l2
+    attributes:
+      Node: FVEKOTHEN5
+      qname: U L1-L2
+      Address: '527'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.14
+      Ide: '205'
+      q_name_cs: Napětí sdružené L1-L2
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN5 U L2 L3
+    state: '{{ states(''sensor.fvekothen5_u_l2_l3_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen5_u_l2_l3
+    attributes:
+      Node: FVEKOTHEN5
+      qname: U L2-L3
+      Address: '528'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.14
+      Ide: '205'
+      q_name_cs: Napětí sdružené L2-L3
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN5 U L3 L1
+    state: '{{ states(''sensor.fvekothen5_u_l3_l1_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen5_u_l3_l1
+    attributes:
+      Node: FVEKOTHEN5
+      qname: U L3-L1
+      Address: '529'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.14
+      Ide: '205'
+      q_name_cs: Napětí sdružené L3-L1
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN5 U L1
+    state: '{{ states(''sensor.fvekothen5_u_l1_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen5_u_l1
+    attributes:
+      Node: FVEKOTHEN5
+      qname: U L1
+      Address: '531'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.14
+      Ide: '205'
+      q_name_cs: Napětí fázové L1
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN5 U L2
+    state: '{{ states(''sensor.fvekothen5_u_l2_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen5_u_l2
+    attributes:
+      Node: FVEKOTHEN5
+      qname: U L2
+      Address: '532'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.14
+      Ide: '205'
+      q_name_cs: Napětí fázové L2
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN5 U L3
+    state: '{{ states(''sensor.fvekothen5_u_l3_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvekothen5_u_l3
+    attributes:
+      Node: FVEKOTHEN5
+      qname: U L3
+      Address: '533'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.72.14
+      Ide: '205'
+      q_name_cs: Napětí fázové L3
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEKOTHEN5 U Unbal
+    state: '{{ states(''sensor.fvekothen5_u_unbal_raw'') }}'
+    unit_of_measurement: '%'
+    unique_id: fvekothen5_u_unbal
+    attributes:
+      Node: FVEKOTHEN5
+      qname: U Unbal.
+      Address: '543'
+      Format: UINT16
+      Scale: '10'
+      IP: 192.168.72.14
+      Ide: '205'
+      q_name_cs: Napěťová nesymetrie
+      defaultJednotky: '%'
+      id: '12'
+      symbol: '%'
+      name_cs: Procenta
+  - name: FVEKOTHEN5 P Celk
+    state: '{{ states(''sensor.fvekothen5_p_celk_raw'') }}'
+    unit_of_measurement: kW
+    unique_id: fvekothen5_p_celk
+    attributes:
+      Node: FVEKOTHEN5
+      qname: P Celk.
+      Address: '550'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.72.14
+      Ide: '205'
+      q_name_cs: Činný výkon okamžitý
+      defaultJednotky: kW
+      id: '21'
+      symbol: kW
+      name_cs: Kilowatty
+  - name: FVEKOTHEN5 Q Celk
+    state: '{{ states(''sensor.fvekothen5_q_celk_raw'') }}'
+    unit_of_measurement: kVAr
+    unique_id: fvekothen5_q_celk
+    attributes:
+      Node: FVEKOTHEN5
+      qname: Q Celk.
+      Address: '554'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.72.14
+      Ide: '205'
+      q_name_cs: Jalový výkon okamžitý
+      defaultJednotky: kVAr
+      id: '23'
+      symbol: kVAr
+      name_cs: Kilovolampér reaktanční
+  - name: FVEKOTHEN5 S Celk
+    state: '{{ states(''sensor.fvekothen5_s_celk_raw'') }}'
+    unit_of_measurement: kVA
+    unique_id: fvekothen5_s_celk
+    attributes:
+      Node: FVEKOTHEN5
+      qname: S Celk.
+      Address: '558'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.72.14
+      Ide: '205'
+      q_name_cs: Zdánlivý výkon okamžitý
+      defaultJednotky: kVA
+      id: '22'
+      symbol: kVA
+      name_cs: Kilovoltampéry
+  - name: FVEVELMOVICE I L1
+    state: '{{ states(''sensor.fvevelmovice_i_l1_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvevelmovice_i_l1
+    attributes:
+      Node: FVEVELMOVICE
+      qname: I L1
+      Address: '507'
+      Format: UINT16
+      Scale: '1'
+      IP: '192.168.74.10 '
+      Ide: '209'
+      q_name_cs: Proud fází L1
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEVELMOVICE I L2
+    state: '{{ states(''sensor.fvevelmovice_i_l2_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvevelmovice_i_l2
+    attributes:
+      Node: FVEVELMOVICE
+      qname: I L2
+      Address: '508'
+      Format: UINT16
+      Scale: '1'
+      IP: '192.168.74.10 '
+      Ide: '209'
+      q_name_cs: Proud fází L2
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEVELMOVICE I L3
+    state: '{{ states(''sensor.fvevelmovice_i_l3_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvevelmovice_i_l3
+    attributes:
+      Node: FVEVELMOVICE
+      qname: I L3
+      Address: '509'
+      Format: UINT16
+      Scale: '1'
+      IP: '192.168.74.10 '
+      Ide: '209'
+      q_name_cs: Proud fází L3
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEVELMOVICE I Unbal
+    state: '{{ states(''sensor.fvevelmovice_i_unbal_raw'') }}'
+    unit_of_measurement: '%'
+    unique_id: fvevelmovice_i_unbal
+    attributes:
+      Node: FVEVELMOVICE
+      qname: I Unbal.
+      Address: '516'
+      Format: UINT16
+      Scale: '10'
+      IP: '192.168.74.10 '
+      Ide: '209'
+      q_name_cs: Proudová nesymetrie
+      defaultJednotky: '%'
+      id: '12'
+      symbol: '%'
+      name_cs: Procenta
+  - name: FVEVELMOVICE U L1 L2
+    state: '{{ states(''sensor.fvevelmovice_u_l1_l2_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvevelmovice_u_l1_l2
+    attributes:
+      Node: FVEVELMOVICE
+      qname: U L1-L2
+      Address: '527'
+      Format: UINT16
+      Scale: '1'
+      IP: '192.168.74.10 '
+      Ide: '209'
+      q_name_cs: Napětí sdružené L1-L2
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEVELMOVICE U L2 L3
+    state: '{{ states(''sensor.fvevelmovice_u_l2_l3_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvevelmovice_u_l2_l3
+    attributes:
+      Node: FVEVELMOVICE
+      qname: U L2-L3
+      Address: '528'
+      Format: UINT16
+      Scale: '1'
+      IP: '192.168.74.10 '
+      Ide: '209'
+      q_name_cs: Napětí sdružené L2-L3
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEVELMOVICE U L3 L1
+    state: '{{ states(''sensor.fvevelmovice_u_l3_l1_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvevelmovice_u_l3_l1
+    attributes:
+      Node: FVEVELMOVICE
+      qname: U L3-L1
+      Address: '529'
+      Format: UINT16
+      Scale: '1'
+      IP: '192.168.74.10 '
+      Ide: '209'
+      q_name_cs: Napětí sdružené L3-L1
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEVELMOVICE U L1
+    state: '{{ states(''sensor.fvevelmovice_u_l1_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvevelmovice_u_l1
+    attributes:
+      Node: FVEVELMOVICE
+      qname: U L1
+      Address: '531'
+      Format: UINT16
+      Scale: '1'
+      IP: '192.168.74.10 '
+      Ide: '209'
+      q_name_cs: Napětí fázové L1
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEVELMOVICE U L2
+    state: '{{ states(''sensor.fvevelmovice_u_l2_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvevelmovice_u_l2
+    attributes:
+      Node: FVEVELMOVICE
+      qname: U L2
+      Address: '532'
+      Format: UINT16
+      Scale: '1'
+      IP: '192.168.74.10 '
+      Ide: '209'
+      q_name_cs: Napětí fázové L2
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEVELMOVICE U L3
+    state: '{{ states(''sensor.fvevelmovice_u_l3_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvevelmovice_u_l3
+    attributes:
+      Node: FVEVELMOVICE
+      qname: U L3
+      Address: '533'
+      Format: UINT16
+      Scale: '1'
+      IP: '192.168.74.10 '
+      Ide: '209'
+      q_name_cs: Napětí fázové L3
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEVELMOVICE U Unbal
+    state: '{{ states(''sensor.fvevelmovice_u_unbal_raw'') }}'
+    unit_of_measurement: '%'
+    unique_id: fvevelmovice_u_unbal
+    attributes:
+      Node: FVEVELMOVICE
+      qname: U Unbal.
+      Address: '543'
+      Format: UINT16
+      Scale: '10'
+      IP: '192.168.74.10 '
+      Ide: '209'
+      q_name_cs: Napěťová nesymetrie
+      defaultJednotky: '%'
+      id: '12'
+      symbol: '%'
+      name_cs: Procenta
+  - name: FVEVELMOVICE P Celk
+    state: '{{ states(''sensor.fvevelmovice_p_celk_raw'') }}'
+    unit_of_measurement: kW
+    unique_id: fvevelmovice_p_celk
+    attributes:
+      Node: FVEVELMOVICE
+      qname: P Celk.
+      Address: '550'
+      Format: SINT16
+      Scale: '1'
+      IP: '192.168.74.10 '
+      Ide: '209'
+      q_name_cs: Činný výkon okamžitý
+      defaultJednotky: kW
+      id: '21'
+      symbol: kW
+      name_cs: Kilowatty
+  - name: FVEVELMOVICE Q Celk
+    state: '{{ states(''sensor.fvevelmovice_q_celk_raw'') }}'
+    unit_of_measurement: kVAr
+    unique_id: fvevelmovice_q_celk
+    attributes:
+      Node: FVEVELMOVICE
+      qname: Q Celk.
+      Address: '554'
+      Format: SINT16
+      Scale: '1'
+      IP: '192.168.74.10 '
+      Ide: '209'
+      q_name_cs: Jalový výkon okamžitý
+      defaultJednotky: kVAr
+      id: '23'
+      symbol: kVAr
+      name_cs: Kilovolampér reaktanční
+  - name: FVEVELMOVICE S Celk
+    state: '{{ states(''sensor.fvevelmovice_s_celk_raw'') }}'
+    unit_of_measurement: kVA
+    unique_id: fvevelmovice_s_celk
+    attributes:
+      Node: FVEVELMOVICE
+      qname: S Celk.
+      Address: '558'
+      Format: SINT16
+      Scale: '1'
+      IP: '192.168.74.10 '
+      Ide: '209'
+      q_name_cs: Zdánlivý výkon okamžitý
+      defaultJednotky: kVA
+      id: '22'
+      symbol: kVA
+      name_cs: Kilovoltampéry
+  - name: FVEVELMOVICE Frekvence
+    state: '{{ states(''sensor.fvevelmovice_frekvence_raw'') }}'
+    unit_of_measurement: Hz
+    unique_id: fvevelmovice_frekvence
+    attributes:
+      Node: FVEVELMOVICE
+      qname: Frekvence
+      Address: '587'
+      Format: UINT16
+      Scale: '100'
+      IP: '192.168.74.10 '
+      Ide: '209'
+      q_name_cs: Frekvence
+      defaultJednotky: Hz
+      id: '9'
+      symbol: Hz
+      name_cs: Hertz
+  - name: FVEVELMOVICE cos FI
+    state: '{{ states(''sensor.fvevelmovice_cos_fi_raw'') }}'
+    unit_of_measurement: 1
+    unique_id: fvevelmovice_cos_fi
+    attributes:
+      Node: FVEVELMOVICE
+      qname: cos FI
+      Address: '50'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: '192.168.74.10 '
+      Ide: '209'
+      q_name_cs: Účinník
+      defaultJednotky: '1'
+      id: '1'
+      symbol: '1'
+      name_cs: bezrozměrná
+  - name: FVEVELMOVICE EP vyr
+    state: '{{ states(''sensor.fvevelmovice_ep_vyr_raw'') }}'
+    unit_of_measurement: kWh
+    unique_id: fvevelmovice_ep_vyr
+    attributes:
+      Node: FVEVELMOVICE
+      qname: EP vyr.
+      Address: '707'
+      Format: S32-M10k-2143
+      Scale: '1000'
+      IP: '192.168.74.10 '
+      Ide: '209'
+      q_name_cs: Činná energie vyrobená
+      defaultJednotky: kWh
+      id: '28'
+      symbol: kWh
+      name_cs: Kilowatt-Hodin
+  - name: FVEVELMOVICE EP spotr
+    state: '{{ states(''sensor.fvevelmovice_ep_spotr_raw'') }}'
+    unit_of_measurement: kWh
+    unique_id: fvevelmovice_ep_spotr
+    attributes:
+      Node: FVEVELMOVICE
+      qname: EP spotr.
+      Address: '715'
+      Format: S32-M10k-2143
+      Scale: '1000'
+      IP: '192.168.74.10 '
+      Ide: '209'
+      q_name_cs: Činná energie spotřebovaná
+      defaultJednotky: kWh
+      id: '28'
+      symbol: kWh
+      name_cs: Kilowatt-Hodin
+  - name: FVEWETTIN EP vyr
+    state: '{{ states(''sensor.fvewettin_ep_vyr_raw'') }}'
+    unit_of_measurement: kWh
+    unique_id: fvewettin_ep_vyr
+    attributes:
+      Node: FVEWETTIN
+      qname: EP vyr.
+      Address: '18'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.71.10
+      Ide: '207'
+      q_name_cs: Činná energie vyrobená
+      defaultJednotky: kWh
+      id: '28'
+      symbol: kWh
+      name_cs: Kilowatt-Hodin
+  - name: FVEWETTIN EP spotr
+    state: '{{ states(''sensor.fvewettin_ep_spotr_raw'') }}'
+    unit_of_measurement: kWh
+    unique_id: fvewettin_ep_spotr
+    attributes:
+      Node: FVEWETTIN
+      qname: EP spotr.
+      Address: '22'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.71.10
+      Ide: '207'
+      q_name_cs: Činná energie spotřebovaná
+      defaultJednotky: kWh
+      id: '28'
+      symbol: kWh
+      name_cs: Kilowatt-Hodin
+  - name: FVEWETTIN EQ spotr
+    state: '{{ states(''sensor.fvewettin_eq_spotr_raw'') }}'
+    unit_of_measurement: kVARh
+    unique_id: fvewettin_eq_spotr
+    attributes:
+      Node: FVEWETTIN
+      qname: EQ spotr.
+      Address: '36'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.71.10
+      Ide: '207'
+      q_name_cs: Jalová energie spotřebovaná [elektroměr]
+      defaultJednotky: kVARh
+      id: '44'
+      symbol: kVARh
+      name_cs: Kilovoltampér-reaktančních-Hodin
+  - name: FVEWETTIN EQ vyr
+    state: '{{ states(''sensor.fvewettin_eq_vyr_raw'') }}'
+    unit_of_measurement: kVARh
+    unique_id: fvewettin_eq_vyr
+    attributes:
+      Node: FVEWETTIN
+      qname: EQ vyr.
+      Address: '46'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.71.10
+      Ide: '207'
+      q_name_cs: Jalová energie vyrobená [elektroměr]
+      defaultJednotky: kVARh
+      id: '44'
+      symbol: kVARh
+      name_cs: Kilovoltampér-reaktančních-Hodin
+  - name: FVEWETTIN cos FI
+    state: '{{ states(''sensor.fvewettin_cos_fi_raw'') }}'
+    unit_of_measurement: 1
+    unique_id: fvewettin_cos_fi
+    attributes:
+      Node: FVEWETTIN
+      qname: cos FI
+      Address: '50'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.71.10
+      Ide: '207'
+      q_name_cs: Účinník
+      defaultJednotky: '1'
+      id: '1'
+      symbol: '1'
+      name_cs: bezrozměrná
+  - name: FVEWETTIN I L1
+    state: '{{ states(''sensor.fvewettin_i_l1_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvewettin_i_l1
+    attributes:
+      Node: FVEWETTIN
+      qname: I L1
+      Address: '507'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.71.10
+      Ide: '207'
+      q_name_cs: Proud fází L1
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEWETTIN I L2
+    state: '{{ states(''sensor.fvewettin_i_l2_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvewettin_i_l2
+    attributes:
+      Node: FVEWETTIN
+      qname: I L2
+      Address: '508'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.71.10
+      Ide: '207'
+      q_name_cs: Proud fází L2
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEWETTIN I L3
+    state: '{{ states(''sensor.fvewettin_i_l3_raw'') }}'
+    unit_of_measurement: A
+    unique_id: fvewettin_i_l3
+    attributes:
+      Node: FVEWETTIN
+      qname: I L3
+      Address: '509'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.71.10
+      Ide: '207'
+      q_name_cs: Proud fází L3
+      defaultJednotky: A
+      id: '2'
+      symbol: A
+      name_cs: Ampéry
+  - name: FVEWETTIN I Unbal
+    state: '{{ states(''sensor.fvewettin_i_unbal_raw'') }}'
+    unit_of_measurement: '%'
+    unique_id: fvewettin_i_unbal
+    attributes:
+      Node: FVEWETTIN
+      qname: I Unbal.
+      Address: '516'
+      Format: UINT16
+      Scale: '10'
+      IP: 192.168.71.10
+      Ide: '207'
+      q_name_cs: Proudová nesymetrie
+      defaultJednotky: '%'
+      id: '12'
+      symbol: '%'
+      name_cs: Procenta
+  - name: FVEWETTIN U L1 L2
+    state: '{{ states(''sensor.fvewettin_u_l1_l2_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvewettin_u_l1_l2
+    attributes:
+      Node: FVEWETTIN
+      qname: U L1-L2
+      Address: '527'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.71.10
+      Ide: '207'
+      q_name_cs: Napětí sdružené L1-L2
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEWETTIN U L2 L3
+    state: '{{ states(''sensor.fvewettin_u_l2_l3_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvewettin_u_l2_l3
+    attributes:
+      Node: FVEWETTIN
+      qname: U L2-L3
+      Address: '528'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.71.10
+      Ide: '207'
+      q_name_cs: Napětí sdružené L2-L3
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEWETTIN U L3 L1
+    state: '{{ states(''sensor.fvewettin_u_l3_l1_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvewettin_u_l3_l1
+    attributes:
+      Node: FVEWETTIN
+      qname: U L3-L1
+      Address: '529'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.71.10
+      Ide: '207'
+      q_name_cs: Napětí sdružené L3-L1
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEWETTIN U L1
+    state: '{{ states(''sensor.fvewettin_u_l1_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvewettin_u_l1
+    attributes:
+      Node: FVEWETTIN
+      qname: U L1
+      Address: '531'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.71.10
+      Ide: '207'
+      q_name_cs: Napětí fázové L1
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEWETTIN U L2
+    state: '{{ states(''sensor.fvewettin_u_l2_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvewettin_u_l2
+    attributes:
+      Node: FVEWETTIN
+      qname: U L2
+      Address: '532'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.71.10
+      Ide: '207'
+      q_name_cs: Napětí fázové L2
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEWETTIN U L3
+    state: '{{ states(''sensor.fvewettin_u_l3_raw'') }}'
+    unit_of_measurement: V
+    unique_id: fvewettin_u_l3
+    attributes:
+      Node: FVEWETTIN
+      qname: U L3
+      Address: '533'
+      Format: UINT16
+      Scale: '1'
+      IP: 192.168.71.10
+      Ide: '207'
+      q_name_cs: Napětí fázové L3
+      defaultJednotky: V
+      id: '3'
+      symbol: V
+      name_cs: Volty
+  - name: FVEWETTIN U Unbal
+    state: '{{ states(''sensor.fvewettin_u_unbal_raw'') }}'
+    unit_of_measurement: '%'
+    unique_id: fvewettin_u_unbal
+    attributes:
+      Node: FVEWETTIN
+      qname: U Unbal.
+      Address: '543'
+      Format: UINT16
+      Scale: '10'
+      IP: 192.168.71.10
+      Ide: '207'
+      q_name_cs: Napěťová nesymetrie
+      defaultJednotky: '%'
+      id: '12'
+      symbol: '%'
+      name_cs: Procenta
+  - name: FVEWETTIN P Celk
+    state: '{{ states(''sensor.fvewettin_p_celk_raw'') }}'
+    unit_of_measurement: kW
+    unique_id: fvewettin_p_celk
+    attributes:
+      Node: FVEWETTIN
+      qname: P Celk.
+      Address: '550'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.71.10
+      Ide: '207'
+      q_name_cs: Činný výkon okamžitý
+      defaultJednotky: kW
+      id: '21'
+      symbol: kW
+      name_cs: Kilowatty
+  - name: FVEWETTIN Q Celk
+    state: '{{ states(''sensor.fvewettin_q_celk_raw'') }}'
+    unit_of_measurement: kVAr
+    unique_id: fvewettin_q_celk
+    attributes:
+      Node: FVEWETTIN
+      qname: Q Celk.
+      Address: '554'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.71.10
+      Ide: '207'
+      q_name_cs: Jalový výkon okamžitý
+      defaultJednotky: kVAr
+      id: '23'
+      symbol: kVAr
+      name_cs: Kilovolampér reaktanční
+  - name: FVEWETTIN S Celk
+    state: '{{ states(''sensor.fvewettin_s_celk_raw'') }}'
+    unit_of_measurement: kVA
+    unique_id: fvewettin_s_celk
+    attributes:
+      Node: FVEWETTIN
+      qname: S Celk.
+      Address: '558'
+      Format: SINT16
+      Scale: '1'
+      IP: 192.168.71.10
+      Ide: '207'
+      q_name_cs: Zdánlivý výkon okamžitý
+      defaultJednotky: kVA
+      id: '22'
+      symbol: kVA
+      name_cs: Kilovoltampéry
+  - name: FVEWETTIN Osvit
+    state: '{{ states(''sensor.fvewettin_osvit_raw'') }}'
+    unit_of_measurement: W/m<sup>2</sup>
+    unique_id: fvewettin_osvit
+    attributes:
+      Node: FVEWETTIN
+      qname: Osvit
+      Address: '722'
+      Format: SwappedFloat
+      Scale: '1'
+      IP: 192.168.71.10
+      Ide: '207'
+      q_name_cs: Osvit
+      defaultJednotky: W/m<sup>2</sup>
+      id: '11'
+      symbol: W/m<sup>2</sup>
+      name_cs: watt/metr<sup>2</sup>
+  - name: MKTWDBERNARTICE EP vyr
+    state: '{{ states(''sensor.mktwdbernartice_ep_vyr_raw'') }}'
     unit_of_measurement: kWh
     unique_id: mktwdbernartice_ep_vyr
     attributes:
@@ -17,7 +2720,7 @@ template:
       symbol: kWh
       name_cs: Kilowatt-Hodin
   - name: MKTWDBERNARTICE EP spotr
-    state: '{{ states(''sensor.mktwdbernartice_ep_spotr'') }}'
+    state: '{{ states(''sensor.mktwdbernartice_ep_spotr_raw'') }}'
     unit_of_measurement: kWh
     unique_id: mktwdbernartice_ep_spotr
     attributes:
@@ -34,7 +2737,7 @@ template:
       symbol: kWh
       name_cs: Kilowatt-Hodin
   - name: MKTWDBERNARTICE EQ spotr
-    state: '{{ states(''sensor.mktwdbernartice_eq_spotr'') }}'
+    state: '{{ states(''sensor.mktwdbernartice_eq_spotr_raw'') }}'
     unit_of_measurement: kVARh
     unique_id: mktwdbernartice_eq_spotr
     attributes:
@@ -51,7 +2754,7 @@ template:
       symbol: kVARh
       name_cs: Kilovoltampér-reaktančních-Hodin
   - name: MKTWDBERNARTICE EQ vyr
-    state: '{{ states(''sensor.mktwdbernartice_eq_vyr'') }}'
+    state: '{{ states(''sensor.mktwdbernartice_eq_vyr_raw'') }}'
     unit_of_measurement: kVARh
     unique_id: mktwdbernartice_eq_vyr
     attributes:
@@ -68,7 +2771,7 @@ template:
       symbol: kVARh
       name_cs: Kilovoltampér-reaktančních-Hodin
   - name: MKTWDBERNARTICE cos FI
-    state: '{{ states(''sensor.mktwdbernartice_cos_fi'') }}'
+    state: '{{ states(''sensor.mktwdbernartice_cos_fi_raw'') }}'
     unit_of_measurement: 1
     unique_id: mktwdbernartice_cos_fi
     attributes:
@@ -85,7 +2788,7 @@ template:
       symbol: '1'
       name_cs: bezrozměrná
   - name: MKTWDBERNARTICE POR FVE
-    state: '{{ states(''sensor.mktwdbernartice_por_fve'') }}'
+    state: '{{ states(''sensor.mktwdbernartice_por_fve_raw'') }}'
     unit_of_measurement: Stav
     unique_id: mktwdbernartice_por_fve
     attributes:
@@ -101,7 +2804,7 @@ template:
       id: '62'
       symbol: Stav
   - name: MKTWDBERNARTICE REG P
-    state: '{{ states(''sensor.mktwdbernartice_reg_p'') }}'
+    state: '{{ states(''sensor.mktwdbernartice_reg_p_raw'') }}'
     unit_of_measurement: '%'
     unique_id: mktwdbernartice_reg_p
     attributes:
@@ -118,7 +2821,7 @@ template:
       symbol: '%'
       name_cs: Procenta
   - name: MKTWDBERNARTICE REG Q
-    state: '{{ states(''sensor.mktwdbernartice_reg_q'') }}'
+    state: '{{ states(''sensor.mktwdbernartice_reg_q_raw'') }}'
     unit_of_measurement: 1
     unique_id: mktwdbernartice_reg_q
     attributes:
@@ -135,7 +2838,7 @@ template:
       symbol: '1'
       name_cs: bezrozměrná
   - name: MKTWDBERNARTICE I L1
-    state: '{{ states(''sensor.mktwdbernartice_i_l1'') }}'
+    state: '{{ states(''sensor.mktwdbernartice_i_l1_raw'') }}'
     unit_of_measurement: A
     unique_id: mktwdbernartice_i_l1
     attributes:
@@ -152,7 +2855,7 @@ template:
       symbol: A
       name_cs: Ampéry
   - name: MKTWDBERNARTICE I L3
-    state: '{{ states(''sensor.mktwdbernartice_i_l3'') }}'
+    state: '{{ states(''sensor.mktwdbernartice_i_l3_raw'') }}'
     unit_of_measurement: A
     unique_id: mktwdbernartice_i_l3
     attributes:
@@ -169,7 +2872,7 @@ template:
       symbol: A
       name_cs: Ampéry
   - name: MKTWDBERNARTICE U L1 L2
-    state: '{{ states(''sensor.mktwdbernartice_u_l1_l2'') }}'
+    state: '{{ states(''sensor.mktwdbernartice_u_l1_l2_raw'') }}'
     unit_of_measurement: V
     unique_id: mktwdbernartice_u_l1_l2
     attributes:
@@ -186,7 +2889,7 @@ template:
       symbol: V
       name_cs: Volty
   - name: MKTWDBERNARTICE U L2
-    state: '{{ states(''sensor.mktwdbernartice_u_l2'') }}'
+    state: '{{ states(''sensor.mktwdbernartice_u_l2_raw'') }}'
     unit_of_measurement: V
     unique_id: mktwdbernartice_u_l2
     attributes:
@@ -203,7 +2906,7 @@ template:
       symbol: V
       name_cs: Volty
   - name: MKTWDBERNARTICE U L3
-    state: '{{ states(''sensor.mktwdbernartice_u_l3'') }}'
+    state: '{{ states(''sensor.mktwdbernartice_u_l3_raw'') }}'
     unit_of_measurement: V
     unique_id: mktwdbernartice_u_l3
     attributes:
@@ -220,7 +2923,7 @@ template:
       symbol: V
       name_cs: Volty
   - name: MKTWDBERNARTICE P Celk
-    state: '{{ states(''sensor.mktwdbernartice_p_celk'') }}'
+    state: '{{ states(''sensor.mktwdbernartice_p_celk_raw'') }}'
     unit_of_measurement: kW
     unique_id: mktwdbernartice_p_celk
     attributes:
@@ -237,7 +2940,7 @@ template:
       symbol: kW
       name_cs: Kilowatty
   - name: MKTWDBERNARTICE Q Celk
-    state: '{{ states(''sensor.mktwdbernartice_q_celk'') }}'
+    state: '{{ states(''sensor.mktwdbernartice_q_celk_raw'') }}'
     unit_of_measurement: kVAr
     unique_id: mktwdbernartice_q_celk
     attributes:
@@ -254,7 +2957,7 @@ template:
       symbol: kVAr
       name_cs: Kilovolampér reaktanční
   - name: MKTWDBERNARTICE S Celk
-    state: '{{ states(''sensor.mktwdbernartice_s_celk'') }}'
+    state: '{{ states(''sensor.mktwdbernartice_s_celk_raw'') }}'
     unit_of_measurement: kVA
     unique_id: mktwdbernartice_s_celk
     attributes:
@@ -271,7 +2974,7 @@ template:
       symbol: kVA
       name_cs: Kilovoltampéry
   - name: MKTWDBERNARTICE Osvit
-    state: '{{ states(''sensor.mktwdbernartice_osvit'') }}'
+    state: '{{ states(''sensor.mktwdbernartice_osvit_raw'') }}'
     unit_of_measurement: W/m<sup>2</sup>
     unique_id: mktwdbernartice_osvit
     attributes:
